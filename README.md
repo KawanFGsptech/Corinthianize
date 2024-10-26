@@ -1,1 +1,1 @@
-# CorinthiansInfo
+# Corinthianize
