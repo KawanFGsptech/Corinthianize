@@ -1,77 +1,66 @@
 body {
     background-color: #E4DDCF;
+    font-family: Consolas, monaco, monospace;
+    font-size: 25px;
+}
+
+#hdr_Inicio {
     display: flex;
-    justify-content: center;
+    justify-content: end;
 }
 
-.titulo {
-    text-align: center;
-}
-
-p {
-    font-size: 30px;
-}
-
-h1 {
-    font-size: 50px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    margin-bottom: 50px;
-}
-
-.inicio {
-    padding: 75px;
-    max-width: 400px;
-}
-
-.botoes_inicio {
-    display: flex;
-    justify-content: space-between;
-}
-
-a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #E4DDCF;
-    border-radius: 30px;
-    font-style: italic;
-    font-weight: bold;
-    height: 30px;
-    width: 100px;
-    border: 3px solid #000;
+#hdr_Inicio a {
+    margin: 30px 30px 0px 0px;
     text-decoration: none;
     color: black;
+    font-weight: bold;
     cursor: pointer;
+    border: 3px solid #000;
+    border-radius: 30px;
+    padding: 5px;
 }
 
-.login {
-    font-size: 15px;
-    margin-bottom: 6px;
+#div_inicio {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-input {
+h1{
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-size: 100px;
+    margin-top: 1px;
+}
+
+#hdr_LoginCadastro h1{
+    font-size: 40px;
+    margin: 30px 0px 0px 30px;
+}
+
+#div_login {
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#div_login input {
     background-color: #C0B7A6;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #000;
     border-radius: 5px;
 }
 
-.ipt_login {
-    width: 400px;
-}
-
-#a_login {
-    margin-top: 30px;
-}
-
-#div_aLogin {
-    display: flex;
-    justify-content: flex-end;
-}
-
-img {
-    height: 50px;
-}
-
-.a_voltar {
-    margin-top: 50px;
-    border: 0 solid;
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: 3px solid #000;
+    border-radius: 30px;
+    padding: 5px;
 }
