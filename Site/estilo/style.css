@@ -64,3 +64,19 @@ a {
     border-radius: 30px;
     padding: 5px;
 }
+
+#div_cadastro {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#div_cadastro input {
+    background-color: #C0B7A6;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
