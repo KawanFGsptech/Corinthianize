@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corinthianize</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+
+    <header class="hdr_titulo" id="hdr_inicio">
+        <h1>CORINTHIANIZE</h1>
+        <div>
+            <a href="inicio.html">HISTÓRIA</a>
+            <a href="elenco.html">ELENCO</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="">PERFIL</a>
+        </div>
+    </header>
+
+    <div id="div_quiz">
+        <h2>Quiz</h2>
+        <p>Selecione a dificuldade:</p>
+        <div id="div_dificuldade">
+            <button onclick="facil()" style="background-color: blue;">Fácil</button>
+            <button onclick="medio()" style="background-color: yellow;">Médio</button>
+            <button onclick="dificil()" style="background-color: red;">Difícil</button>
+        </div>
+        <button id="btn_iniciar" style="background-color: black; color: white;">Iniciar</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    var dificuldade = "fácil"
+
+    function facil() {
+        dificuldade = "facil"
+    }
+
+    function medio() {
+        dificuldade = "medio"
+    }
+
+    function dificil() {
+        dificuldade = "dificil"
+    }
+
+</script>

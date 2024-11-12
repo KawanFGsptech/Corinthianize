@@ -140,7 +140,7 @@ img {
 .div_jogadores button {
     margin-bottom: 20px;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 5px;
     font-family: Consolas, monaco, monospace;
     background-color: black;
     color: white;
@@ -171,3 +171,33 @@ img {
     width: 900px;
 }
 
+#div_quiz {
+    margin-left: 30px;
+}
+
+#div_dificuldade {
+    height: 50px;
+    justify-content: space-between;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+}
+
+#div_dificuldade button {
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 90px;
+    font-weight: bold;
+}
+
+#btn_iniciar {
+    cursor: pointer;
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin-left: 155px;
+    margin-top: 50px;
+    height: 50px;
+    width: 90px;
+    font-weight: bold;
+}
