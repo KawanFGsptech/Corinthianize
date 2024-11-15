@@ -204,3 +204,10 @@ img {
     font-weight: bold;
     display: none;
 }
+
+.hidden {
+    display: none;
+}
+.question {
+    margin-bottom: 20px;
+}
