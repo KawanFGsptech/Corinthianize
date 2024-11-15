@@ -19,14 +19,12 @@
     </header>
 
     <div id="div_quiz">
-        <h2>Quiz</h2>
-        <p>Selecione a dificuldade:</p>
-        <div id="div_dificuldade">
-            <button onclick="facil()" style="background-color: blue;">Fácil</button>
-            <button onclick="medio()" style="background-color: yellow;">Médio</button>
-            <button onclick="dificil()" style="background-color: red;">Difícil</button>
-        </div>
+        <h2>QUIZ DA FIEL</h2>
         <button id="btn_iniciar" style="background-color: black; color: white;">Iniciar</button>
+        <div id="div_questoes">
+
+        </div>
+        
     </div>
     
 </body>
@@ -34,18 +32,6 @@
 
 <script>
 
-    var dificuldade = "fácil"
-
-    function facil() {
-        dificuldade = "facil"
-    }
-
-    function medio() {
-        dificuldade = "medio"
-    }
-
-    function dificil() {
-        dificuldade = "dificil"
-    }
+    import questions from "./questoes.js"
 
 </script>

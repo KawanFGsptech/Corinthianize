@@ -171,33 +171,36 @@ img {
     width: 900px;
 }
 
-#div_quiz {
-    margin-left: 30px;
-}
-
-#div_dificuldade {
-    height: 50px;
-    justify-content: space-between;
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-}
 
 #div_dificuldade button {
+    height: 50px;
     cursor: pointer;
     border: 2px solid #000;
     border-radius: 10px;
     width: 90px;
     font-weight: bold;
+}
+
+#div_quiz {
+    margin-left: 30px;
+}
+
+#div_questoes {
+    background-color: white;
+    height: 400px;
+    width: 700px;
+    margin-left: 20%;
+
 }
 
 #btn_iniciar {
     cursor: pointer;
     border: 2px solid #000;
     border-radius: 10px;
-    margin-left: 155px;
-    margin-top: 50px;
+    margin-left: 48%;
+    margin-top: 5%;
     height: 50px;
     width: 90px;
     font-weight: bold;
+    display: none;
 }
