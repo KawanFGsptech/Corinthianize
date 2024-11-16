@@ -30,12 +30,12 @@
                 <img src="img/carrossel3.jpg" alt="Imagem 3">
             </div>
             <div class="slide">
-                <img src="img/carrossel4.webp" alt="Imagem 3">
+                <img src="img/carrossel4.jpg" alt="Imagem 3">
             </div>
         </div>
     </div>
 
-    <div>
+    <div id="div_inicio">
         <div id="div_historia">
             <h2>HISTÓRIA</h2> <br>
     
@@ -116,11 +116,20 @@
                 e com diversas categorias de base. Outros esportes também foram incorporados. São muitas as modalidades em que
                 é possível torcer para o Corinthians, alguns exemplos são o futsal e o baquete. 
             </div>
-
-            <a id="fonte">https://www.meutimao.com.br/historia-do-corinthians/fatos-marcantes/a_fundacao_do_corinthians</a>
         </div>
         <div id="div_imagens">
-
+            <img src="img/foto_um.jpg" title="Primeiro treino da história do Corinthians">
+            <img src="img/foto_dois.jpg" title="Camisa de Doutor Sócrates em apoio a democracia">
+            <img src="img/foto_tres.jpg" title="Neto comemora gol pelo Corinthians">
+            <img src="img/foto_quatro.jpg" title="Rincón levanta a taça do primeiro mundial do Corinthians">
+            <img src="img/foto_cinco.jpg" title="Ronaldo levanta a taça da Copa do Brasil de 2009">
+            <img src="img/foto_seis.jpg" title="Alessandro levanta a taça da Libertadores de 2012">
+            <img src="img/foto_sete.jpg" title="Alessandro levanta a taça do mundial de 2012">
+            <img src="img/foto_oito.jpg" title="Rivellino na inauguração da Arena Corinthians (atual NQA)">
+            <img src="img/foto_nove.jpg" title="Basílio comemora o gol do título do Paulistão de 1977">
+            <img src="img/foto_dez.jpg" title="Cássio opera o milagre do Pacaembu">
+            <img src="img/foto_onze.jpg" title="Romarinho faz gol de cavadinha na Bombonera">
+            <img src="img/foto_dois.jpg" title="Romero tira a famosa selfie no Derby">
         </div>
     </div>
     
@@ -130,7 +139,7 @@
 <script>
 
 let currentSlide = 0;
-const slideInterval = 3000; // Intervalo em milissegundos (3 segundos)
+const slideInterval = 3000;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.slide');
@@ -145,7 +154,6 @@ function showSlide(index) {
     const slidesContainer = document.querySelector('.slides');
     slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-    // Remove a classe 'active' de todos os slides e adiciona ao slide atual
     slides.forEach(slide => slide.classList.remove('active'));
     slides[currentSlide].classList.add('active');
 }
@@ -159,7 +167,6 @@ function prevSlide() {
 }
 
 
-// Mudar automaticamente para o próximo slide a cada intervalo
 setInterval(nextSlide, slideInterval);
 
 </script>

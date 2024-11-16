@@ -21,11 +21,10 @@ body {
 }
 
 #div_inicio {
+    padding: 10px;
     height: 500px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 h1{
@@ -106,6 +105,7 @@ a {
 }
 
 .texto_historia {
+    line-height: 1.5;
     padding: 10px;
 }
 
@@ -171,43 +171,15 @@ img {
     width: 900px;
 }
 
-
-#div_dificuldade button {
-    height: 50px;
-    cursor: pointer;
-    border: 2px solid #000;
-    border-radius: 10px;
-    width: 90px;
-    font-weight: bold;
+#div_imagens {
+    margin-top: 3200px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-#div_quiz {
-    margin-left: 30px;
-}
-
-#div_questoes {
-    background-color: white;
-    height: 400px;
-    width: 700px;
-    margin-left: 20%;
-
-}
-
-#btn_iniciar {
-    cursor: pointer;
-    border: 2px solid #000;
-    border-radius: 10px;
-    margin-left: 48%;
-    margin-top: 5%;
-    height: 50px;
-    width: 90px;
-    font-weight: bold;
-    display: none;
-}
-
-.hidden {
-    display: none;
-}
-.question {
-    margin-bottom: 20px;
+#div_imagens img {
+    padding: 50px;
+    width: 600px;
 }

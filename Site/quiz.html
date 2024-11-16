@@ -1,132 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthianize</title>
-    <link rel="stylesheet" href="estilo/style.css">
+    <link rel="stylesheet" href="estilo/stylesquiz.css" />
+    <script src="questoes.js" async></script>
 </head>
 <body>
 
-    <header class="hdr_titulo" id="hdr_inicio">
-        <h1>CORINTHIANIZE</h1>
-        <div>
-            <a href="inicio.html">HISTÓRIA</a>
-            <a href="elenco.html">ELENCO</a>
-            <a href="quiz.html">QUIZ</a>
-            <a href="">PERFIL</a>
-        </div>
+    <header>
+        <a id="a_titulo" href="inicio.html">CORINTHIANIZE</a>
     </header>
 
     <div id="div_quiz">
-        <h2>QUIZ DA FIEL</h2>
-        <div id="quiz">
-            <div class="question" id="questionContainer"></div>
-            <button onclick="nextQuestion()">Próxima Pergunta</button>
+        <div class="container">
+            <div class="question-container hide">
+                <span class="question">Pergunta</span>
+                <div class="answers-conteiner">
+                    <button class="answer button">Resposta 1</button>
+                    <button class="answer button">Resposta 2</button>
+                    <button class="answer button">Resposta 3</button>
+                    <button class="answer button">Resposta 4</button>
+                </div>
+            </div>
+            <div class="controls-container">
+                <button class="start-quiz button">Começar Quiz!</button>
+                <button class="next-question button hide">Próxima pergunta</button>
+            </div>
         </div>
-    
-        <div id="result" class="hidden">
-            <p id="resultText"></p>
-            <button onclick="restartQuiz()">Reiniciar Quiz</button>
-        </div>
-
-        </div>
-        
     </div>
-    
+
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
-
-const questions = [
-            {
-                question: "Qual é a capital do Brasil?",
-                options: ["A) Brasília", "B) Rio de Janeiro", "C) São Paulo", "D) Salvador"],
-                answer: "A"
-            },
-            {
-                question: "Qual é o maior planeta do sistema solar?",
-                options: ["A) Terra", "B) Júpiter", "C) Marte", "D) Saturno"],
-                answer: "B"
-            },
-            {
-                question: "Qual é a fórmula da água?",
-                options: ["A) H2O", "B) CO2", "C) O2", "D) NaCl"],
-                answer: "A"
-            },
-            {
-                question: "Quem escreveu 'Dom Casmurro'?",
-                options: ["A) Machado de Assis", "B) José de Alencar", "C) Clarice Lispector", "D) Jorge Amado"],
-                answer: "A"
-            },
-            {
-                question: "Qual é o continente onde fica o Egito?",
-                options: ["A) Ásia", "B) Europa", "C) África", "D) América"],
-                answer: "C"
-            },
-            {
-                question: "Qual é a moeda oficial do Japão?",
-                options: ["A) Yuan", "B) Won", "C) Iene", "D) Dólar"],
-                answer: "C"
-            },
-            {
-                question: "Quem pintou a Mona Lisa?",
-                options: ["A) Van Gogh", "B) Picasso", "C) Leonardo da Vinci", "D) Michelangelo"],
-                answer: "C"
-            },
-            {
-                question: "Qual é o maior oceano do mundo?",
-                options: ["A) Atlântico", "B) Índico", "C) Pacífico", "D) Ártico"],
-                answer: "C"
-            },
-            {
-                question: "Em que ano o homem pisou na Lua?",
-                options: ["A) 1965", "B) 1969", "C) 1971", "D) 1975"],
-                answer: "B"
-            },
-            {
-                question: "Qual é a capital da França?",
-                options: ["A) Paris", "B) Londres", "C) Berlim", "D) Madrid"],
-                answer: "A"
-            }
-        ];
-
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        function loadQuestion() {
-            const questionContainer = document.getElementById('questionContainer');
-            const question = questions[currentQuestionIndex];
-
-            questionContainer.innerHTML = `<h2>${question.question}</h2>`;
-            question.options.forEach(option => {
-                questionContainer.innerHTML += `<label><input type="radio" name="answer" value="${option.charAt(0)}"> ${option}</label><br>`;
-            });
-        }
-
-        function nextQuestion() {
-            const radios = document.getElementsByName('answer');
-            let selectedAnswer;
-
-            for (const radio of radios) {
-                if (radio.checked) {
-                    selectedAnswer = radio.value;
-                    break;
-                }
-            }
-
-            if (selectedAnswer === questions[currentQuestionIndex].answer) {
-                score++;
-            }
-
-            currentQuestionIndex++;
-
-            if (currentQuestionIndex < questions.length) {
-                loadQuestion();
-            } else {
-                showResult();
-            }
-        }
-
-</script>

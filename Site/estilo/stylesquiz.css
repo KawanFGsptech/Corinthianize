@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Consolas, monaco, monospace;
+    flex-direction: column;
+  }
+  
+a {
+    margin-left: 35%;
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+    font-family: Copperplate, Copperplate Gothic Light, fantasy;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+header {
+    background-color: #E4DDCF;
+    padding: 30px;
+  }
+  
+  button{
+       cursor: pointer;
+  }
+  
+  #div_quiz {
+      background-color: #E4DDCF;
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .container {
+      background-color: #48453E;
+      color: white;
+      width: 90%;
+      max-width: 800px;
+      border: 2px solid #f5b200;
+      border-radius: 6px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  }
+  
+  
+  
+  .question-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+  }
+  
+  .question{
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      color: #000;
+  }
+  
+  .answers-conteiner{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 16px;
+  }
+  
+  .next-question{
+      margin-top: 32px;
+  }
+  
+  button{
+      background-color: #00a7e8;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: 0;
+      border-radius: 6px;
+      height: 48px;
+      padding: 0 32px;
+  
+      transition: filter 0.2s;
+  }
+  
+  button:not(:disabled):hover{
+      filter: brightness(0.8);
+  }
+  
+  .answer:disabled{
+      cursor: not-allowed;
+  }
+  
+  .hide {
+      display: none;
+  }
+  
+  .correct{
+      background-color: blue;
+  }
+  
+  .incorrect {
+      background-color: #a10101;
+  }
+  
+  .final-message {
+      color: #72fc02; /* Mude para a cor que preferir /
+      font-size: 20px; / Altere o tamanho se desejar /
+      text-align: center; / Centraliza a mensagem */
+  }
+  
+  .final-message span{
+      display: block;
+      margin-top: 8px;
+  }
+
+  #div_chart {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 400px;
+}

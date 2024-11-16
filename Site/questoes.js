@@ -1,92 +1,204 @@
-export default [
-    {
-      question: "Em que ano foi fundado o Corinthians?",
+var $startGameButton = document.querySelector(".start-quiz");
+var $questionsContainer = document.querySelector(".question-container");
+var $answersContainer = document.querySelector(".answers-conteiner");
+var $questionText = document.querySelector(".question");
+var $nextQuestionButton = document.querySelector(".next-question");
+
+$startGameButton.addEventListener("click", startGame)
+$nextQuestionButton.addEventListener("click", displayNextQuestion)
+
+
+var currentQuestionIndex = 0
+var totalCorrect = 0
+
+function startGame() {
+    $startGameButton.classList.add("hide");
+    $questionsContainer.classList.remove("hide");
+    displayNextQuestion()
+}
+
+
+function displayNextQuestion() {
+    resetState()
+
+    if (question.length === currentQuestionIndex) {
+        return finishGame()
+    }
+
+    $questionText.textContent = question[currentQuestionIndex].question
+    question[currentQuestionIndex].answers.forEach(answer => {
+        var newAnswer = document.createElement("button")
+        newAnswer.classList.add("button", "answer")
+        newAnswer.textContent = answer.text
+        if (answer.correct) {
+            newAnswer.dataset.correct = answer.correct
+        }
+        $answersContainer.appendChild(newAnswer)
+
+        newAnswer.addEventListener("click", selectAnswer)
+    })
+}
+
+function resetState() {
+    while ($answersContainer.firstChild) {
+        $answersContainer.removeChild($answersContainer.firstChild)
+    }
+
+    $nextQuestionButton.classList.add("hide")
+}
+
+function selectAnswer(event) {
+    var answerClicked = event.target;
+
+    document.querySelectorAll(".answer").forEach(button => {
+        if (button.dataset.correct) {
+            button.classList.add("correct");
+        } else {
+            button.classList.add("incorrect");
+        }
+        button.disabled = true;
+    });
+
+    if (answerClicked.dataset.correct === "true") {
+        totalCorrect++;
+    }
+
+    $nextQuestionButton.classList.remove("hide");
+    currentQuestionIndex++;
+}
+
+function finishGame() {
+    var totalQuestions = question.length;
+    var performance = Math.floor((totalCorrect / totalQuestions) * 100);
+
+    var message = '';
+
+    switch (true) {
+        case (performance >= 90):
+            message = "Excelente :)";
+            break;
+        case (performance >= 70):
+            message = "Muito bom :)";
+            break;
+        case (performance >= 50):
+            message = "Bom";
+            break;
+        default:
+            message = "Pode melhorar :(";
+    }
+
+    $questionsContainer.innerHTML = `
+    <div id="div_chart">
+    <canvas id="myChart"></canvas>
+    <button onclick=window.location.reload() class="button">
+    Refazer teste
+    </button>
+    </div>`;
+var ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['certas','erradas'],
+      datasets: [{
+        label: '# of Votes',
+        data: [totalCorrect,(totalQuestions - totalCorrect) ],
+        borderWidth: 1
+      }]
+    },
+  });
+}
+
+
+var question = [
+  {
+    question: "Em que ano foi fundado o Corinthians?",
+    answers: [
+      { text: "1905", correct: false },
+      { text: "1910", correct: true },
+      { text: "1920", correct: false },
+      { text: "1920", correct: false },
+    ],
+  },
+  {
+    question: "Qual foi o adversário do Corinthians na final do Mundial de 2012?",
+    answers: [
+      { text: "Barcelona - ESP", correct: false },
+      { text: "Juventus - ITA", correct: false },
+      { text: "Bayern - ALE", correct: false },
+      { text: "Chelsea - ING", correct: true },
+    ],
+  },
+  {
+    question: "Quantos títulos brasileiros tem o Corinthians?",
+    answers: [
+      { text: "7", correct: true },
+      { text: "6", correct: false },
+      { text: "5", correct: false },
+      { text: "4", correct: false },
+    ],
+  },
+  {
+    question: "Qual o jogador com maior número de jogos pelo Corinthians?",
+    answers: [
+      { text: "Cássio", correct: false },
+      { text: "Zé Maria", correct: false },
+      { text: "Wladimir", correct: true },
+      { text: "Cláudio", correct: false },
+    ],
+  },
+  {
+      question: "Em que bairro de São Paulo é localizada a Neo Química Arena?",
       answers: [
-        { option: "1905", correct: false },
-        { option: "1910", correct: true },
-        { option: "1920", correct: false },
-        { option: "1920", correct: false },
+        { text: "Itaquera", correct: true },
+        { text: "Canindé", correct: false },
+        { text: "Barra Funda", correct: false },
+        { text: "Morumbi", correct: false },
       ],
     },
     {
-      question: "Qual foi o adversário do Corinthians na final do Mundial de 2012?",
+      question: "Qual o mascote do Corinthians?",
       answers: [
-        { option: "Barcelona - ESP", correct: false },
-        { option: "Juventus - ITA", correct: false },
-        { option: "Bayern - ALE", correct: false },
-        { option: "Chelsea - ING", correct: true },
+        { text: "Gambá", correct: false },
+        { text: "Gavião", correct: false },
+        { text: "Zizao", correct: false },
+        { text: "Mosqueteiro", correct: true },
       ],
     },
     {
-      question: "Quantos títulos brasileiros tem o Corinthians?",
+      question: "Quem fez o gol da vitória contra o Vasco na Libertadores de 2012?",
       answers: [
-        { option: "7", correct: true },
-        { option: "6", correct: false },
-        { option: "5", correct: false },
-        { option: "4", correct: false },
+        { text: "Fábio Santos", correct: false },
+        { text: "Paulinho", correct: true },
+        { text: "Emerson Sheik", correct: false },
+        { text: "Jorge Henrique", correct: false },
       ],
     },
     {
-      question: "Qual o jogador com maior número de jogos pelo Corinthians?",
+      question: "Como se inicia o hino do Corinthians?",
       answers: [
-        { option: "Cássio", correct: false },
-        { option: "Zé Maria", correct: false },
-        { option: "Wladimir", correct: true },
-        { option: "Cláudio", correct: false },
+        { text: "Salve o Corinthians...", correct: true },
+        { text: "Até a pé nos iremos...", correct: false },
+        { text: "Eu teria um desgosto profundo...", correct: false },
+        { text: "Corinthians, Corinthians, goool...", correct: false },
       ],
     },
     {
-        question: "Em que bairro de São Paulo é localizada a Neo Química Arena?",
-        answers: [
-          { option: "Itaquera", correct: true },
-          { option: "Canindé", correct: false },
-          { option: "Barra Funda", correct: false },
-          { option: "Morumbi", correct: false },
-        ],
-      },
-      {
-        question: "Qual o mascote do Corinthians?",
-        answers: [
-          { option: "Gambá", correct: false },
-          { option: "Gavião", correct: false },
-          { option: "Zizao", correct: false },
-          { option: "Mosqueteiro", correct: true },
-        ],
-      },
-      {
-        question: "Quem fez o gol da vitória contra o Vasco na Libertadores de 2012?",
-        answers: [
-          { option: "Fábio Santos", correct: false },
-          { option: "Paulinho", correct: true },
-          { option: "Emerson Sheik", correct: false },
-          { option: "Jorge Henrique", correct: false },
-        ],
-      },
-      {
-        question: "Como se inicia o hino do Corinthians?",
-        answers: [
-          { option: "Salve o Corinthians...", correct: true },
-          { option: "Até a pé nos iremos...", correct: false },
-          { option: "Eu teria um desgosto profundo...", correct: false },
-          { option: "Corinthians, Corinthians, goool...", correct: false },
-        ],
-      },
-      {
-        question: "Qual time inspirou a criação do Corinthians?",
-        answers: [
-          { option: "Fluminense", correct: false },
-          { option: "Manchester United", correct: false },
-          { option: "Corinthian FC", correct: true },
-          { option: "Criciúma", correct: false },
-        ],
-      },
-      {
-        question: "Qual estrangeiro mais vestiu a camisa do Corinthians?",
-        answers: [
-          { option: "Balbuena", correct: false },
-          { option: "Rincón", correct: false },
-          { option: "Guerrero", correct: false },
-          { option: "Romero", correct: true },
-        ],
-      },
-      ];
+      question: "Qual time inspirou a criação do Corinthians?",
+      answers: [
+        { text: "Fluminense", correct: false },
+        { text: "Manchester United", correct: false },
+        { text: "Corinthian FC", correct: true },
+        { text: "Criciúma", correct: false },
+      ],
+    },
+    {
+      question: "Qual estrangeiro mais vestiu a camisa do Corinthians?",
+      answers: [
+        { text: "Balbuena", correct: false },
+        { text: "Rincón", correct: false },
+        { text: "Guerrero", correct: false },
+        { text: "Romero", correct: true },
+      ],
+    },
+    ];
