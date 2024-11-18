@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthianize</title>
     <link rel="stylesheet" href="estilo/style.css">
 </head>
+
 <body>
 
     <header class="hdr_titulo">
@@ -15,16 +17,49 @@
     <div id="div_cadastro">
         <div>
             <p>Nome:</p>
-            <input type="text">
-            <p>Apelido:</p>
-            <input type="text">
+            <input type="text" id="ipt_nome">
+            <p>Nick:</p>
+            <input type="text" id="ipt_nick">
             <p>Email:</p>
-            <input type="text">
+            <input type="text" id="ipt_email">
             <p>Senha:</p>
-            <input type="password"> <br> <br>
-            <a href="login.html">CADASTRAR</a>
+            <input type="password" id="ipt_senha"> <br> <br>
+            <button onclick="cadastrar()">CADASTRAR</button>
         </div>
     </div>
-    
+
 </body>
+
 </html>
+
+<script>
+
+    function cadastrar() {
+
+        var nomeVar = ipt_nome.value
+        var nickVar = ipt_nick.value
+        var emailVar = ipt_email.value
+        var senhaVar = ipt_senha.value
+
+        if (nomeVar != "" || nickVar != "" || emailVar != "" || senhaVar != "") {
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    nomeServer: nomeVar,
+                    nickServer: nickVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar,
+                }),
+            })
+        } else {
+            alert('Preencha todos os campos')
+        }
+
+    }
+
+</script>
