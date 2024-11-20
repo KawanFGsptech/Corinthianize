@@ -24,7 +24,9 @@ body {
     padding: 10px;
     height: 500px;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 h1{
@@ -91,6 +93,15 @@ a {
 #hdr_inicio div a{
     border: 0px;
     margin-left: 15px;
+}
+
+#btn_cadlog {
+    font-family: Consolas, monaco, monospace;
+    border: 0px;
+    background-color: #E4DDCF;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 #banner {

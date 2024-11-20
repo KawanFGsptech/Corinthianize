@@ -63,3 +63,6 @@ insert into Jogador (nome, posicao) values
     ('Romero', 'Atacante'),
     ('Talles Magno', 'Atacante'),
     ('Yuri Alberto', 'Atacante');
+
+
+select * from Usuario;

@@ -10,6 +10,7 @@ router.post("/cadastrar", function (req, res) {
 
 router.post("/autenticar", function (req, res) {
     usuarioController.autenticar(req, res);
+    // console.log("chegamo aq")
 });
 
 module.exports = router;

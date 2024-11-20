@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthianize</title>
     <link rel="stylesheet" href="estilo/style.css">
 </head>
+
 <body>
 
     <header class="hdr_titulo">
@@ -21,19 +23,30 @@
             <button onclick="login()">LOGIN</button>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 
 <script>
 
     function login() {
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
 
-        if (emailVar != "" || senhaVar != "") {
-            fetch("/usuarios/autenticar", {
+        if (emailVar == "" || senhaVar == "") {
+            alert('Preencha todos os campos')
+            return false;
+        }
+        else {
+            setInterval(5000)
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,9 +55,44 @@
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
-        })
-        }
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
 
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json)
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id_usuario;
+
+                    setTimeout(function () {
+                        window.location.href = "./inicio.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
+
+
 
 </script>

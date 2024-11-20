@@ -24,7 +24,7 @@
             <input type="text" id="ipt_email">
             <p>Senha:</p>
             <input type="password" id="ipt_senha"> <br> <br>
-            <button onclick="cadastrar()">CADASTRAR</button>
+            <button onclick="cadastrar()" id="btn_cadlog">CADASTRAR</button>
         </div>
     </div>
 
@@ -42,7 +42,12 @@
         var senhaVar = ipt_senha.value
 
         if (nomeVar != "" || nickVar != "" || emailVar != "" || senhaVar != "") {
-            fetch("/usuarios/cadastrar", {
+            setInterval(5000);
+        } else {
+            alert('Preencha todos os campos')
+        }
+
+        fetch("/usuarios/cadastrar", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -72,11 +77,6 @@
                 .catch(function (resposta) {
                     console.log(`#ERRO: ${resposta}`);
                 });
-
-            return false;
-        } else {
-            alert('Preencha todos os campos')
-        }
 
     }
 
