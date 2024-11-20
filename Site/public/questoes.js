@@ -90,9 +90,6 @@ function finishGame() {
     $questionsContainer.innerHTML = `
     <div id="div_chart">
     <canvas id="myChart"></canvas>
-    <button onclick=window.location.reload() class="button">
-    Refazer teste
-    </button>
     </div>`;
 var ctx = document.getElementById('myChart');
 
@@ -116,7 +113,7 @@ var question = [
     answers: [
       { text: "1905", correct: false },
       { text: "1910", correct: true },
-      { text: "1920", correct: false },
+      { text: "1915", correct: false },
       { text: "1920", correct: false },
     ],
   },
