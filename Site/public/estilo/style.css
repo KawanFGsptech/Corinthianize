@@ -165,7 +165,7 @@ img {
 }
 
 .div_jogadores button:hover {
-    transform: translateY(-10%) scale(1.1); /* Aumenta o botão em 10% ao passar o mouse */
+    transform: translateY(-10%) scale(1.1);
 }
 
 .div_jogadores img {
@@ -226,4 +226,13 @@ img {
 
 h2 {
     margin-left: 30px;
+}
+
+#div_graficos {
+    padding: 20px;
+    display: flex;
+    margin-left: 25%;
+    align-items: center;
+    flex-direction: row;
+    width: 500px;
 }

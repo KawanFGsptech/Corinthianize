@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header class="hdr_titulo" id="hdr_inicio">
+        <h1>CORINTHIANIZE</h1>
+        <div>
+            <a href="historia.html">HISTÓRIA</a>
+            <a href="elenco.html">ELENCO</a>
+            <a href="quiz.html">QUIZ</a>
+            <a href="dash.html">DASH</a>
+            <a style="color: red;" href="index.html">SAIR</a>
+        </div>
+    </header>
+
+    <div id="div_graficos">
+        <canvas id="grafico1"></canvas>
+        <canvas id="grafico2"></canvas>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    var ctx1 = document.getElementById('grafico1');
+    var ctx2 = document.getElementById('grafico2')
+
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['certas', 'erradas'],
+            datasets: [{
+                label: '# of Votes',
+                data: [7, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+        indexAxis: 'y',
+  }
+    });
+
+    new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: ['certas', 'erradas'],
+            datasets: [{
+                label: '# of Votes',
+                data: [7, 3],
+                borderWidth: 1
+            }]
+        },
+        options: {
+        indexAxis: 'y',
+  }
+    });
+
+
+</script>

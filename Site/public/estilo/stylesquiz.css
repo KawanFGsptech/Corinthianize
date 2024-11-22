@@ -111,9 +111,9 @@ header {
   }
   
   .final-message {
-      color: #72fc02; /* Mude para a cor que preferir /
-      font-size: 20px; / Altere o tamanho se desejar /
-      text-align: center; / Centraliza a mensagem */
+      color: black;
+      font-size: 20px;
+      text-align: center;
   }
   
   .final-message span{

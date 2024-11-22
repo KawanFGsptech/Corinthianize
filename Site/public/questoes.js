@@ -71,41 +71,17 @@ function finishGame() {
     var totalQuestions = question.length;
     var performance = Math.floor((totalCorrect / totalQuestions) * 100);
 
-    var message = '';
-
-    switch (true) {
-        case (performance >= 90):
-            message = "Excelente :)";
-            break;
-        case (performance >= 70):
-            message = "Muito bom :)";
-            break;
-        case (performance >= 50):
-            message = "Bom";
-            break;
-        default:
-            message = "Pode melhorar :(";
-    }
-
-    $questionsContainer.innerHTML = `
-    <div id="div_chart">
-    <canvas id="myChart"></canvas>
-    </div>`;
-var ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: ['certas','erradas'],
-      datasets: [{
-        label: '# of Votes',
-        data: [totalCorrect,(totalQuestions - totalCorrect) ],
-        borderWidth: 1
-      }]
-    },
-  });
-}
-
+    $questionsContainer.innerHTML = 
+    `
+      <p class="final-message">
+        Você acertou ${totalCorrect} de ${totalQuestions} questões!
+        <span>Vai Corinthians!!!</span>
+      </p>
+      <button onclick=window.location.href="./dash.html" class="button">
+        Ver resultados
+      </button>
+    `
+  }
 
 var question = [
   {
@@ -199,3 +175,23 @@ var question = [
       ],
     },
     ];
+
+function cadastrarNota() {
+
+  fetch("/resultado/cadastrarNota", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        NotaServer: totalCorrect,
+    }),
+})
+    .then(function (resposta) {
+        console.log("resposta: ", resposta);
+    })
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    });
+
+}
