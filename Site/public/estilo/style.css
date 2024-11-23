@@ -95,6 +95,21 @@ a {
     margin-left: 15px;
 }
 
+#colunas {
+    display: flex;
+    flex-direction: row;
+}
+
+#colunas div {
+    padding: 15px;
+}
+
+#colunas img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
 #btn_cadlog {
     font-family: Consolas, monaco, monospace;
     border: 0px;
@@ -111,7 +126,6 @@ a {
 
 #div_historia {
     margin-left: 30px;
-    width: 600px;
     text-align: justify;
 }
 
