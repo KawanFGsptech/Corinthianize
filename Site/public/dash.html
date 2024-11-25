@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body>
+<body onload="chart1()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -34,7 +34,47 @@
 <script>
 
     var ctx1 = document.getElementById('grafico1');
-    var ctx2 = document.getElementById('grafico2')
+    var ctx2 = document.getElementById('grafico2');
+
+    function chart1() {
+        fetch(`/resultado/listar/`, {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(function (resposta) {
+            
+            if (resposta.ok) {
+                console.log("resposta: ", resposta);
+                plotGrafico1(resposta)
+
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+    }
+
+    function plotGrafico1(resposta) {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['certas', 'erradas'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [7, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+            }
+        });
+    }
 
     new Chart(ctx1, {
         type: 'bar',
@@ -47,8 +87,8 @@
             }]
         },
         options: {
-        indexAxis: 'y',
-  }
+            indexAxis: 'y',
+        }
     });
 
     new Chart(ctx2, {
@@ -62,8 +102,8 @@
             }]
         },
         options: {
-        indexAxis: 'y',
-  }
+            indexAxis: 'y',
+        }
     });
 
 

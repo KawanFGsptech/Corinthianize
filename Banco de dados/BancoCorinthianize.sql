@@ -17,3 +17,7 @@ constraint fkUsuarioResultado foreign key (fkUsuario) references Usuario (idUsua
 );
 
 select * from Usuario;
+
+select * from ResultadoQuiz;
+
+select u.nome, r.resultado from Usuario as u join ResultadoQuiz as r on fkUsuario = idUsuario;
