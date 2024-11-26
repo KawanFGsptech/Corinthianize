@@ -15,7 +15,7 @@
             <a href="elenco.html">ELENCO</a>
             <a href="quiz.html">QUIZ</a>
             <a href="dash.html">DASH</a>
-            <a style="color: red;" href="index.html">SAIR</a>
+            <a style="color: red;" onclick="limparSessao()">SAIR</a>
         </div>
     </header>
 
@@ -750,6 +750,11 @@
 // if(usuario == undefined || usuario == null){
 //     window.location.href = './login.html'
 // }
+
+function limparSessao() {
+    sessionStorage.clear();
+    window.location = "../index.html";
+}
 
 var currentSlide = 0;
 var slideInterval = 3000;

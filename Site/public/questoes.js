@@ -11,6 +11,7 @@ $nextQuestionButton.addEventListener("click", displayNextQuestion)
 var currentQuestionIndex = 0
 var totalCorrect = 0
 
+
 function startGame() {
     $startGameButton.classList.add("hide");
     $questionsContainer.classList.remove("hide");
@@ -194,4 +195,32 @@ function cadastrarNota() {
         console.log(`#ERRO: ${resposta}`);
     });
 
+}
+
+function obterDadosQuiz() {
+  fetch(`/resultado/listar1/${sessionStorage.getItem("ID_USUARIO")}`, {
+      method: "get",
+      headers: {
+          "Content-Type": "application/json"
+      },
+  }).then(function (resposta) {
+
+      if (resposta.ok) {
+          resposta.json().then(json => {
+              certas = json[0].resultado
+              $questionsContainer.innerHTML =
+                  `
+                  <p class="final-message">
+                  Você já respondeu o Quiz <br>
+                  Você acertou ${certas} de ${question.length} questões!
+                  <span>Vai Corinthians!!!</span>
+                  </p>
+                  <button onclick=window.location.href="./dash.html" class="button">
+                  Ver resultados
+                  </button>
+                  `
+                  return
+          })
+      }
+  })
 }

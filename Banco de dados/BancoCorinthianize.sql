@@ -16,8 +16,51 @@ fkUsuario int,
 constraint fkUsuarioResultado foreign key (fkUsuario) references Usuario (idUsuario)
 );
 
+create table Votos (
+    id int primary key auto_increment,
+    jogador varchar(45),
+    qtd int default 0 
+);
+
+insert into Votos (jogador) values
+	('Longo'),
+    ('Hugo Souza'),
+    ('Donelli'),
+    ('Ramalho'),
+    ('Cacá'),
+    ('Félix'),
+    ('GH'),
+    ('Caetano'),
+    ('Palacios'),
+    ('Hugo'),
+    ('Matheuzinho'),
+    ('Fagner'),
+    ('Bidu'),
+    ('Santana'),
+    ('Carrillo'),
+    ('Bidon'),
+    ('Charles'),
+    ('Martínez'),
+    ('Ryan'),
+    ('Maycon'),
+    ('Raniele'),
+    ('Coronado'),
+    ('Araújo'),
+    ('Garro'),
+    ('Ruan'),
+    ('Giovane'),
+    ('Héctor'),
+    ('Memphis'),
+    ('P Henrique'),
+    ('P Raul'),
+    ('Romero'),
+    ('Talles'),
+    ('Yuri');
+
 select * from Usuario;
 
 select * from ResultadoQuiz;
+
+select * from Votos;
 
 select u.nome, r.resultado from Usuario as u join ResultadoQuiz as r on fkUsuario = idUsuario;

@@ -18,7 +18,7 @@
             <a href="elenco.html">ELENCO</a>
             <a href="quiz.html">QUIZ</a>
             <a href="dash.html">DASH</a>
-            <a style="color: red;" href="index.html">SAIR</a>
+            <a style="color: red;" onclick="limparSessao()">SAIR</a>
         </div>
     </header>
 
@@ -36,6 +36,11 @@
 </html>
 
 <script>
+
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "../index.html";
+    }
 
     var ctx1 = document.getElementById('grafico1');
     var ctx2 = document.getElementById('grafico2');
@@ -166,7 +171,7 @@
                                     size: 18, // Tamanho da fonte do título
                                     family: 'Consolas, monaco, monospace'
                                 },
-                                
+
                             },
                             legend: {
                                 position: 'top',
