@@ -11,7 +11,7 @@ router.get("/listar1/:idUsuario", function (req, res) {
     resultadoController.listar1(req, res);
 })
 
-router.get("/listar2/:idUsuario", function (req, res) {
+router.get("/listar2/", function (req, res) {
     resultadoController.listar2(req, res);
 })
 

@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="obterDadosGrafico1()">
+<body onload="obterDadosGrafico1(), obterDadosGrafico2()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -23,8 +23,12 @@
     </header>
 
     <div id="div_graficos">
-        <canvas id="grafico1"></canvas>
-        <canvas id="grafico2"></canvas>
+        <div class="g1">
+            <canvas id="grafico1"></canvas>
+        </div>
+        <div class="g2">
+            <canvas id="grafico2"></canvas>
+        </div>
     </div>
 
 </body>
@@ -70,7 +74,7 @@
                     data: {
                         labels: ['certas', 'erradas'],
                         datasets: [{
-                            backgroundColor: ['#000', '#FFF'],
+                            backgroundColor: ['#000', '#808080'],
                             data: [certas, 10 - certas],
                             borderWidth: 1
                         }]
@@ -80,7 +84,7 @@
                         plugins: {
                             title: {
                                 display: true, // Para mostrar o título
-                                text: 'Sua quantidade de acertos', // Texto do título
+                                text: 'Seu desempenho QUIZ', // Texto do título
                                 font: {
                                     size: 18, // Tamanho da fonte do título
                                     family: 'Consolas, monaco, monospace'
@@ -130,8 +134,46 @@
         if (resposta.ok) {
 
             resposta.json().then(json => {
-                
+                var tamanho_lista = json.length;
+                var lista_nomes = [];
+                var lista_resultados = []
+                for (var i = 0; i < tamanho_lista; i++) {
+                    var nome_atual = json[i].nome
+                    var resultado_atual = json[i].resultado
 
+                    lista_nomes.push(nome_atual)
+                    lista_resultados.push(resultado_atual)
+                }
+
+                new Chart(ctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: lista_nomes,
+                        datasets: [{
+                            label: 'acertos',
+                            backgroundColor: ['#000', '#808080'],
+                            data: lista_resultados,
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                            title: {
+                                display: true, // Para mostrar o título
+                                text: 'Ranking', // Texto do título
+                                font: {
+                                    size: 18, // Tamanho da fonte do título
+                                    family: 'Consolas, monaco, monospace'
+                                },
+                                
+                            },
+                            legend: {
+                                position: 'top',
+                            }
+                        }
+                    }
+                });
 
             })
 
@@ -139,21 +181,6 @@
 
 
     }
-
-    // new Chart(ctx2, {
-    //     type: 'bar',
-    //     data: {
-    //         labels: ['certas', 'erradas'],
-    //         datasets: [{
-    //             label: '# of Votes',
-    //             data: [7,3],
-    //             borderWidth: 1
-    //         }]
-    //     },
-    //     options: {
-    //         indexAxis: 'y',
-    //     }
-    // });
 
 
 </script>

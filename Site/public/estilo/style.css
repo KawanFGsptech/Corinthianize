@@ -29,13 +29,13 @@ body {
     flex-direction: column;
 }
 
-h1{
+h1 {
     font-family: Copperplate, Copperplate Gothic Light, fantasy;
     font-size: 100px;
     margin-top: 1px;
 }
 
-.hdr_titulo h1{
+.hdr_titulo h1 {
     font-size: 40px;
     margin: 30px 0px 0px 30px;
 }
@@ -90,7 +90,7 @@ a {
     padding: 40px;
 }
 
-#hdr_inicio div a{
+#hdr_inicio div a {
     border: 0px;
     margin-left: 15px;
 }
@@ -243,10 +243,20 @@ h2 {
 }
 
 #div_graficos {
-    padding: 20px;
     display: flex;
-    margin-left: 25%;
-    align-items: center;
+    justify-content: space-around;
     flex-direction: row;
-    width: 500px;
+    width: 70%
+}
+
+.g1 {
+    margin-left: 10%;
+    width: 50%;
+}
+
+.g2 {
+    margin-left: 10%;
+    width: 80%;
+
+
 }

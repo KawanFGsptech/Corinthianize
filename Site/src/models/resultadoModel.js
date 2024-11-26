@@ -13,7 +13,7 @@ function listar1(idUsuario) {
 }
 
 function listar2() {
-    console.log('Estou na model do resultado')
+    console.log('Estou na model do resultado 2')
     var instrucaoSql = `select u.nome, r.resultado from Usuario as u join ResultadoQuiz as r on fkUsuario = idUsuario`
     return database.executar(instrucaoSql)
 }
