@@ -15,8 +15,10 @@ function cadastrarNota(req, res) {
     })
 }
 
-function listar(req, res) {
-    resultadoModel.listar()
+function listar1(req, res) {
+
+    var idUsuario = req.params.idUsuario
+    resultadoModel.listar1(idUsuario)
     .then(function(resultado){
         res.status(200).json(resultado)
     }).catch(err=>{
@@ -24,4 +26,14 @@ function listar(req, res) {
     })
 }
 
-module.exports = {cadastrarNota,listar}
+function listar2(req, res) {
+
+    resultadoModel.listar2()
+    .then(function(resultado){
+        res.status(200).json(resultado)
+    }).catch(err=>{
+        res.status(500).send(err)
+    })
+}
+
+module.exports = {cadastrarNota, listar1, listar2}

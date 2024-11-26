@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="chart1()">
+<body onload="obterDadosGrafico1()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -36,14 +36,14 @@
     var ctx1 = document.getElementById('grafico1');
     var ctx2 = document.getElementById('grafico2');
 
-    function chart1() {
-        fetch(`/resultado/listar/`, {
+    function obterDadosGrafico1() {
+        fetch(`/resultado/listar1/${sessionStorage.getItem("ID_USUARIO")}`, {
             method: "get",
             headers: {
                 "Content-Type": "application/json"
             },
         }).then(function (resposta) {
-            
+
             if (resposta.ok) {
                 console.log("resposta: ", resposta);
                 plotGrafico1(resposta)
@@ -55,56 +55,105 @@
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
     }
 
     function plotGrafico1(resposta) {
-        new Chart(ctx1, {
-            type: 'bar',
-            data: {
-                labels: ['certas', 'erradas'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [7, 3],
-                    borderWidth: 1
-                }]
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+                certas = json[0].resultado;
+
+                new Chart(ctx1, {
+                    type: 'pie',
+                    data: {
+                        labels: ['certas', 'erradas'],
+                        datasets: [{
+                            backgroundColor: ['#000', '#FFF'],
+                            data: [certas, 10 - certas],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                            title: {
+                                display: true, // Para mostrar o título
+                                text: 'Sua quantidade de acertos', // Texto do título
+                                font: {
+                                    size: 18, // Tamanho da fonte do título
+                                    family: 'Consolas, monaco, monospace'
+                                },
+                                padding: {
+                                    top: 10,
+                                    bottom: 30
+                                }
+                            },
+                            legend: {
+                                position: 'top',
+                            }
+                        }
+                    }
+                });
+            })
+
+        }
+
+
+    }
+
+    function obterDadosGrafico2() {
+        fetch(`/resultado/listar2/`, {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
             },
-            options: {
-                indexAxis: 'y',
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                console.log("resposta: ", resposta);
+                plotGrafico2(resposta)
+
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
             }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
         });
     }
 
-    new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: ['certas', 'erradas'],
-            datasets: [{
-                label: '# of Votes',
-                data: [7, 3],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            indexAxis: 'y',
-        }
-    });
+    function plotGrafico2(resposta) {
 
-    new Chart(ctx2, {
-        type: 'pie',
-        data: {
-            labels: ['certas', 'erradas'],
-            datasets: [{
-                label: '# of Votes',
-                data: [7, 3],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            indexAxis: 'y',
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+                
+
+
+            })
+
         }
-    });
+
+
+    }
+
+    // new Chart(ctx2, {
+    //     type: 'bar',
+    //     data: {
+    //         labels: ['certas', 'erradas'],
+    //         datasets: [{
+    //             label: '# of Votes',
+    //             data: [7,3],
+    //             borderWidth: 1
+    //         }]
+    //     },
+    //     options: {
+    //         indexAxis: 'y',
+    //     }
+    // });
 
 
 </script>
