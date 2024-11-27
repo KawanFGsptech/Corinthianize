@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthianize</title>
     <link rel="stylesheet" href="estilo/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
+
+<body onload="obterDadosGrafico()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -14,76 +17,308 @@
             <a href="historia.html">HISTÓRIA</a>
             <a href="elenco.html">ELENCO</a>
             <a href="quiz.html">QUIZ</a>
-            <a href="dash.html">DASH</a>
+            <a href="dash.html">STATS</a>
             <a style="color: red;" onclick="limparSessao()">SAIR</a>
         </div>
     </header>
-      
-        <div id="div_elenco">
-            <h2>ELENCO</h2>
-            <h3>Goleiros</h3>
-            <div class="div_jogadores">
-                <button><img src="img/longo.png" alt=""><b>F Longo</b></button>
-                <button><img src="img/pepeca.png" alt=""><b>Hugo Souza</b></button>
-                <button><img src="img/donelli.png" alt=""><b>Donelli</b></button>
-            </div>
-            
-            <h3>Zagueiros</h3>
-            <div class="div_jogadores">
-                <button><img src="img/ramalho.png" alt=""><b>Ramalho</b></button>
-                <button><img src="img/caca.png" alt=""><b>Cacá</b></button>
-                <button><img src="img/felix.png" alt=""><b>Félix</b></button>
-                <button><img src="img/gh.png" alt=""><b>GH</b></button>
-                <button><img src="img/caetano.png" alt=""><b>Caetano</b></button>
-            </div>
-    
-            <h3>Laterais</h3>
-            <div class="div_jogadores">
-                <button><img src="img/palacios.png" alt=""><b>Palacios</b></button>
-                <button><img src="img/botinha.png" alt=""><b>Hugo</b></button>
-                <button><img src="img/matheuzinho.png" alt="">Matheuzinho<b></b></button>
-                <button><img src="img/fagner.png" alt=""><b>Fagner</b></button>
-                <button><img src="img/bidu.png" alt=""><b>Bidu</b></button>
-            </div>
-            
-            <h3>Meias</h3>
-            <div class="div_jogadores">
-                <button><img src="img/santana.png" alt=""><b>Santana</b></button>
-                <button><img src="img/carrillo.png" alt=""><b>Carrillo</b></button>
-                <button><img src="img/bidon.png" alt=""><b>Bidon</b></button>
-                <button><img src="img/charles.png" alt=""><b>Charles</b></button>
-                <button><img src="img/martinez.png" alt=""><b>Martínez</b></button>
-                <button><img src="img/ryan.png" alt=""><b>Ryan</b></button>
-                <button><img src="img/maycon.png" alt=""><b>Maycon</b></button>
-                <button><img src="img/raniele.png" alt=""><b>Raniele</b></button>
-                <button><img src="img/coronado.png" alt=""><b>Coronado</b></button>
-                <button><img src="img/araujo.png" alt=""><b>Araújo</b></button>
-                <button><img src="img/garro.png" alt=""><b>Garro</b></button>
-                <button><img src="img/ruan.png" alt=""><b>Ruan</b></button>
-            </div>
-            
-            <h3>Atacantes</h3>
-            <div class="div_jogadores">
-                <button><img src="img/giovane.png" alt=""><b>Giovane</b></button>
-                <button><img src="img/hector.png" alt=""><b>Héctor</b></button>
-                <button><img src="img/memphis.png" alt=""><b>Memphis</b></button>
-                <button><img src="img/pedrohenrique.png" alt=""><b>P Henrique</b></button>
-                <button><img src="img/pedroraul.png" alt=""><b>P Raul</b></button>
-                <button><img src="img/romero.png" alt=""><b>Romero</b></button>
-                <button><img src="img/talles.png" alt=""><b>Talles</b></button>
-                <button><img src="img/yuri.png" alt=""><b>Yuri</b></button>
-            </div>
+
+    <h2>ELENCO</h2>
+    <div id="div_elenco">
+        <p>Vote nos seus jogadores favoritos (Você pode votar mais de uma vez)</p>
+        <h3>Goleiros</h3>
+        <div class="div_jogadores">
+            <button><img onclick="votar('Longo')" src="img/longo.png" alt=""><b>F Longo</b></button>
+            <button><img onclick="votar('Hugo Souza')" src="img/pepeca.png" alt=""><b>Hugo Souza</b></button>
+            <button><img onclick="votar('Donelli')" src="img/donelli.png" alt=""><b>Donelli</b></button>
         </div>
-    
-    
+
+        <div class="grafico_votacao">
+            <canvas id="grafico_goleiros"></canvas>
+        </div>
+
+        <h3>Zagueiros</h3>
+        <div class="div_jogadores">
+            <button><img onclick="votar('Ramalho')" src="img/ramalho.png" alt=""><b>Ramalho</b></button>
+            <button><img onclick="votar('Cacá')" src="img/caca.png" alt=""><b>Cacá</b></button>
+            <button><img onclick="votar('Félix')" src="img/felix.png" alt=""><b>Félix</b></button>
+            <button><img onclick="votar('GH')" src="img/gh.png" alt=""><b>GH</b></button>
+            <button><img onclick="votar('Caetano')" src="img/caetano.png" alt=""><b>Caetano</b></button>
+        </div>
+
+        <div class="grafico_votacao">
+            <canvas id="grafico_zagueiros"></canvas>
+        </div>
+
+        <h3>Laterais</h3>
+        <div class="div_jogadores">
+            <button><img onclick="votar('Palacios')" src="img/palacios.png" alt=""><b>Palacios</b></button>
+            <button><img onclick="votar('Hugo')" src="img/botinha.png" alt=""><b>Hugo</b></button>
+            <button><img onclick="votar('Matheuzinho')" src="img/matheuzinho.png" alt="">Matheuzinho<b></b></button>
+            <button><img onclick="votar('Fagner')" src="img/fagner.png" alt=""><b>Fagner</b></button>
+            <button><img onclick="votar('Bidu')" src="img/bidu.png" alt=""><b>Bidu</b></button>
+        </div>
+
+        <div class="grafico_votacao">
+            <canvas id="grafico_laterais"></canvas>
+        </div>
+
+        <h3>Meias</h3>
+        <div class="div_jogadores">
+            <button><img onclick="votar('Santana')" src="img/santana.png" alt=""><b>Santana</b></button>
+            <button><img onclick="votar('Carrillo')" src="img/carrillo.png" alt=""><b>Carrillo</b></button>
+            <button><img onclick="votar('Bidon')" src="img/bidon.png" alt=""><b>Bidon</b></button>
+            <button><img onclick="votar('Charles')" src="img/charles.png" alt=""><b>Charles</b></button>
+            <button><img onclick="votar('Martínez')" src="img/martinez.png" alt=""><b>Martínez</b></button>
+            <button><img onclick="votar('Ryan')" src="img/ryan.png" alt=""><b>Ryan</b></button>
+            <button><img onclick="votar('Maycon')" src="img/maycon.png" alt=""><b>Maycon</b></button>
+            <button><img onclick="votar('Raniele')" src="img/raniele.png" alt=""><b>Raniele</b></button>
+            <button><img onclick="votar('Coronado')" src="img/coronado.png" alt=""><b>Coronado</b></button>
+            <button><img onclick="votar('Araújo')" src="img/araujo.png" alt=""><b>Araújo</b></button>
+            <button><img onclick="votar('Garro')" src="img/garro.png" alt=""><b>Garro</b></button>
+            <button><img onclick="votar('Ruan')" src="img/ruan.png" alt=""><b>Ruan</b></button>
+        </div>
+
+        <div class="grafico_votacao">
+            <canvas id="grafico_meias"></canvas>
+        </div>
+
+        <h3>Atacantes</h3>
+        <div class="div_jogadores">
+            <button><img onclick="votar('Giovane')" src="img/giovane.png" alt=""><b>Giovane</b></button>
+            <button><img onclick="votar('Héctor')" src="img/hector.png" alt=""><b>Héctor</b></button>
+            <button><img onclick="votar('Memphis')" src="img/memphis.png" alt=""><b>Memphis</b></button>
+            <button><img onclick="votar('P Henrique')" src="img/pedrohenrique.png" alt=""><b>P Henrique</b></button>
+            <button><img onclick="votar('P Raul')" src="img/pedroraul.png" alt=""><b>P Raul</b></button>
+            <button><img onclick="votar('Romero')" src="img/romero.png" alt=""><b>Romero</b></button>
+            <button><img onclick="votar('Talles')" src="img/talles.png" alt=""><b>Talles</b></button>
+            <button><img onclick="votar('Yuri')" src="img/yuri.png" alt=""><b>Yuri</b></button>
+        </div>
+
+        <div class="grafico_votacao">
+            <canvas id="grafico_atacantes"></canvas>
+        </div>
+    </div>
+
+
 </body>
+
 </html>
 
 <script>
 
-function limparSessao() {
-    sessionStorage.clear();
-    window.location = "../index.html";
+    var ctx1 = document.getElementById('grafico_goleiros');
+    var ctx2 = document.getElementById('grafico_zagueiros');
+    var ctx3 = document.getElementById('grafico_laterais');
+    var ctx4 = document.getElementById('grafico_meias');
+    var ctx5 = document.getElementById('grafico_atacantes');
+
+    var MyChart1 = ""
+    var MyChart2 = ""
+    var MyChart3 = ""
+    var MyChart4 = ""
+    var MyChart5 = ""
+
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "../index.html";
+    }
+
+    function votar(nomeJogador) {
+        fetch(`/votos/votar/${nomeJogador}`, {
+            method: "POST",
+        })
+            .then((response) => {
+                if (response.ok) {
+                    console.log(`Voto contabilizado`);
+                    atualizarGrafico();
+                } else {
+                    console.error("Erro na votação ou jogador não encontrado");
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro ao realizar o voto: ${error.message}`);
+            });
+    }
+
+    function obterDadosGrafico() {
+        fetch(`/votos/ultimos`, { cache: "no-store" })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        plotarGrafico(resposta);
+                    });
+                } else {
+                    console.error("Nenhum dado encontrado ou erro na API");
+                }
+            })
+            .catch(function (error) {
+                console.error(
+                    `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+                );
+            });
+    }
+
+    var lista_goleiros = []
+    var lista_qtd_goleiros = []
+    var lista_zagueiros = []
+    var lista_qtd_zagueiros = []
+    var lista_laterais = []
+    var lista_qtd_laterais = []
+    var lista_meias = []
+    var lista_qtd_meias = []
+    var lista_atacantes = []
+    var lista_qtd_atacantes = []
+
+    function plotarGrafico(resposta) {
+        console.log("iniciando plotagem do gráfico...");
+
+        lista_goleiros = []
+        lista_qtd_goleiros = []
+        lista_zagueiros = []
+        lista_qtd_zagueiros = []
+        lista_laterais = []
+        lista_qtd_laterais = []
+        lista_meias = []
+        lista_qtd_meias = []
+        lista_atacantes = []
+        lista_qtd_atacantes = []
+
+        // Inserindo valores recebidos em estrutura para plotar o gráfico
+
+
+        for (var i = 0; i < resposta.length; i++) {
+            var jogador_atual = resposta[i].jogador
+            var qtd_atual = resposta[i].qtd
+
+            if (resposta[i].posicao == 'goleiro') {
+                lista_goleiros.push(jogador_atual)
+                lista_qtd_goleiros.push(qtd_atual)
+            } else if (resposta[i].posicao == 'zagueiro') {
+                lista_zagueiros.push(jogador_atual)
+                lista_qtd_zagueiros.push(qtd_atual)
+            } else if (resposta[i].posicao == 'lateral') {
+                lista_laterais.push(jogador_atual)
+                lista_qtd_laterais.push(qtd_atual)
+            } else if (resposta[i].posicao == 'meia') {
+                lista_meias.push(jogador_atual)
+                lista_qtd_meias.push(qtd_atual)
+            } else if (resposta[i].posicao == 'atacante') {
+                lista_atacantes.push(jogador_atual)
+                lista_qtd_atacantes.push(qtd_atual)
+            }
+        }
+
+        MyChart1 = new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: lista_goleiros,
+                datasets: [{
+                    label: 'Votos goleiros',
+                    backgroundColor: ['#000', '#808080'],
+                    data: lista_qtd_goleiros,
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        MyChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: lista_zagueiros,
+                datasets: [{
+                    label: 'Votos zagueiros',
+                    backgroundColor: ['#000', '#808080'],
+                    data: lista_qtd_zagueiros,
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        MyChart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: lista_laterais,
+                datasets: [{
+                    label: 'Votos laterais',
+                    backgroundColor: ['#000', '#808080'],
+                    data: lista_qtd_laterais,
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        MyChart4 = new Chart(ctx4, {
+            type: 'bar',
+            data: {
+                labels: lista_meias,
+                datasets: [{
+                    label: 'Votos meias',
+                    backgroundColor: ['#000', '#808080'],
+                    data: lista_qtd_meias,
+                    borderWidth: 1
+                }]
+            },
+        });
+
+        MyChart5 = new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: lista_atacantes,
+                datasets: [{
+                    label: 'Votos atacantes',
+                    backgroundColor: ['#000', '#808080'],
+                    data: lista_qtd_atacantes,
+                    borderWidth: 1
+                }]
+            },
+        });
+
+    }
+
+    function atualizarGrafico() {
+    fetch(`/votos/ultimos`, { cache: "no-store" })
+        .then(function (resposta) {
+            if (resposta.ok) {
+                resposta.json().then(function (respostaJSON) {
+                    // Limpar dados anteriores
+                    MyChart1.data.datasets[0].data = [];
+                    MyChart2.data.datasets[0].data = [];
+                    MyChart3.data.datasets[0].data = [];
+                    MyChart4.data.datasets[0].data = [];
+                    MyChart5.data.datasets[0].data = [];
+
+                    // Filtrar e atribuir dados para cada gráfico
+                    for (var i = 0; i < respostaJSON.length; i++) {
+                        var jogador = respostaJSON[i];
+                        if (jogador.posicao == 'goleiro') {
+                            MyChart1.data.datasets[0].data.push(jogador.qtd);
+                        } else if (jogador.posicao == 'zagueiro') {
+                            MyChart2.data.datasets[0].data.push(jogador.qtd);
+                        } else if (jogador.posicao == 'lateral') {
+                            MyChart3.data.datasets[0].data.push(jogador.qtd);
+                        } else if (jogador.posicao == 'meia') {
+                            MyChart4.data.datasets[0].data.push(jogador.qtd);
+                        } else if (jogador.posicao == 'atacante') {
+                            MyChart5.data.datasets[0].data.push(jogador.qtd);
+                        }
+                    }
+
+                    // Atualizar todos os gráficos
+                    MyChart1.update();
+                    MyChart2.update();
+                    MyChart3.update();
+                    MyChart4.update();
+                    MyChart5.update();
+                });
+            } else {
+                console.error("Nenhum dado encontrado ou erro na API");
+            }
+        })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
 }
 
 </script>

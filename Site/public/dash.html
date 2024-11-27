@@ -17,7 +17,7 @@
             <a href="historia.html">HISTÓRIA</a>
             <a href="elenco.html">ELENCO</a>
             <a href="quiz.html">QUIZ</a>
-            <a href="dash.html">DASH</a>
+            <a href="dash.html">STATS</a>
             <a style="color: red;" onclick="limparSessao()">SAIR</a>
         </div>
     </header>
@@ -140,20 +140,20 @@
 
             resposta.json().then(json => {
                 var tamanho_lista = json.length;
-                var lista_nomes = [];
+                var lista_nicks = [];
                 var lista_resultados = []
                 for (var i = 0; i < tamanho_lista; i++) {
-                    var nome_atual = json[i].nome
+                    var nick_atual = json[i].nick
                     var resultado_atual = json[i].resultado
 
-                    lista_nomes.push(nome_atual)
+                    lista_nicks.push(nick_atual)
                     lista_resultados.push(resultado_atual)
                 }
 
                 new Chart(ctx2, {
                     type: 'bar',
                     data: {
-                        labels: lista_nomes,
+                        labels: lista_nicks,
                         datasets: [{
                             label: 'acertos',
                             backgroundColor: ['#000', '#808080'],
@@ -166,7 +166,7 @@
                         plugins: {
                             title: {
                                 display: true, // Para mostrar o título
-                                text: 'Ranking', // Texto do título
+                                text: 'Ranking de usuários', // Texto do título
                                 font: {
                                     size: 18, // Tamanho da fonte do título
                                     family: 'Consolas, monaco, monospace'
