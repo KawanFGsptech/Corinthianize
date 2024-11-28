@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corinthianize</title>
     <link rel="stylesheet" href="estilo/style.css">
 </head>
-<body>
+
+<body onload="obterDados()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -37,754 +39,958 @@
     </div>
 
     <h2>HISTÓRIA</h2> <br>
-        <div id="div_historia">
 
-            <div id="colunas">
-                <div id="coluna_1">
-                    <b>1910 - A fundação</b>
-                    <p>
-                        Às 20h30 do dia 1º de setembro, à luz de um lampião, na esquina das ruas José Paulino e Cônego Martins, no bairro do Bom Retiro,
-                        o grupo de operários formado por Anselmo Corrêa, Antônio Pereira, Carlos Silva, Joaquim Ambrósio e Raphael Perrone fundaram o
-                        Sport Club Corinthians Paulista. Com mais oito rapazes, foi formada a reunião dos primeiros integrantes e sócio fundadores do Timão,
-                        que teve seu nome inspirado na equipe inglesa Corinthian Football Club, que fazia excursão pelo Brasil. O presidente escolhido por
-                        eles foi o alfaiate Miguel Battaglia, que, já no primeiro momento, afirmou: “O Corinthians vai ser o time do povo e o povo é quem
-                        vai fazer o time”. Um terreno alugado na Rua José Paulino foi aplainado, virou campo e foi lá que, já no dia 14 de setembro, o primeiro
-                        treino foi realizado diante de uma plateia entusiasmada, que garantiu: “Este veio para ficar!”.
-                    </p>
-
-                    <img src="img/foto_dois.jpg" alt="">
-
-                    <b>1914 - O primeiro título</b>
-                    <p>
-                        Primeiro título do Sport Club Corinthians Paulista. Com 10 vitórias em 10 jogos disputados, o Timão marcou 37 gols e venceu a última
-                        partida por 3 a 0, contra o Lusitano, no Parque Antártica. O atacante Neco foi o artilheiro do torneio com 12 gols. O Alvinegro conquistou
-                        o Campeonato Paulista com uma rodada de antecedência. No dia 08 de novembro, a equipe derrotou o Campos Elyseos por 4 a 0 e sagrou-se campeã
-                        com a seguinte escalação: Aristides, Fúlvio e Casemiro González; Police, Bianco e César Nunes; Américo, Peres, Amílcar, Apparício e Neco.
-                    </p>
-
-                    <b>1915 - Ano discreto</b>
-                    <p>
-                        O Alvinegro deixou a Liga Paulista de Futebol por conta de uma vaga desejada no campeonato da Associação Paulista de Esportes Atléticos,
-                        onde jogavam os grandes times da época. Porém, ficou de fora das duas competições.
-                    </p>
-
-                    <img src="img/foto_quatro.jpg" alt="">
-
-                    <b>1919 - Torneio Início</b>
-                    <p>
-                        Campeão do primeiro Torneio Início da história do futebol de São Paulo. No mesmo ano, o Alvinegro conquistou a primeira vitória sobre o
-                        Palestra Itália em jogos de campeonato. No Parque Antártica, o ponta-direita Américo marcou o gol que definiu o resultado da partida: 1 a 0.
-                    </p>
-
-                    <b>1920 - O artilheiro Neco</b>
-                    <p>
-                        O Corinthians foi bicampeão do Torneio Início. Com 24 gols, Neco foi novamente o artilheiro do Campeonato Paulista. O ataque alvinegro atingiu
-                        a marca de 75 gols em 17 jogos.
-                    </p>
-
-                    <b>1921- Ficou no quase</b>
-                    <p>
-                        No Natal, o Timão precisava vencer o Palestra para ser campeão. O adversário, porém, levou a melhor e tirou o título do Alvinegro.
-                    </p>
-
-                    <b>1922 - Centenário da Independência</b>
-                    <p>
-                        O Corinthians foi campeão paulista no ano do Centenário da Independência do Brasil. O jogo, disputado em fevereiro do ano seguinte,
-                        terminou em 2 a 0 sobre o Paulistano no campo da Floresta.
-                    </p>
-
-                    <img src="img/foto_seis.jpg" alt="">
-
-                    <b>1926 - Parque São Jorge</b>
-                    <p>
-                        O Corinthians comprou o terreno do Parque São Jorge, cujo campo seria reformado e reinaugurado dois anos depois.
-                    </p>
-
-                    <b>1927 - Ano de participações</b>
-                    <p>
-                        A equipe alvinegra não levantou nenhuma taça no ano, mas participou de dois campeonatos paulistas diferentes: o da
-                        Liga dos Amadores de Futebol (LAF) e o da Associação Paulista de Esportes Atléticos (Apea).
-                    </p>
-
-                    <b>1928 - A fazendinha</b>
-                    <p>
-                        No dia 22 de julho, o Parque São Jorge foi reinaugurado no empate em 2 a 2 contra o América-RJ. Com a ilustre defesa
-                        formada por Tuffy, Grané e Del Debbio, o clube voltou a conquistar o Paulista no final do ano. 
-                    </p>
-
-                    <img src="img/foto_oito.jpg" alt="">
-
-                    <b>1930 - O campeão dos campeões</b>
-                    <p>
-                        Em 1930, o Timão fechou a década com seis conquistas do Campeonato Paulista em 10 disputados. Foi o segundo tricampeonato alvinegro.
-                        Logo depois, o Corinthians venceu o Vasco, campeão carioca, por 3 a 2. Por conta desse resultado, passou a ser chamado de “Campeão dos Campeões”. 
-                    </p>
-
-                    <b>1931 - Venda de estrelas</b>
-                    <p>
-                        Devido ao ótimo desempenho do clube, quatro titulares da equipe tricampeã foram vendidos para a Lazio, da Itália. Sem Del Debbio, Filó, Rato e
-                        De Maria, o Alvinegro ficou enfraquecido e não passou do sexto lugar no Paulista. 
-                    </p>
-
-                    <img src="img/foto_dez.jpg" alt="">
-
-                    <b>1934 - o futuro ídolo Teleco</b>
-                    <p>
-                        No final do ano, o Corinthians ganhou um grande reforço: Teleco. O centroavante paranaense viria a se tornar um dos maiores artilheiros do clube. 
-                    </p>
-
-                    <b>1935 - Não deu</b>
-                    <p>
-                        O Alvinegro brigou pelo título paulista até o fim com os reforços de Jaú, De Maria e Brandão, mas terminou em terceiro lugar. Teleco foi o
-                        artilheiro da competição com nove gols.
-                    </p>
-
-                    <img src="img/foto_doze.webp" alt="">
-
-                    <b>1938 - Nenhuma derrota</b>
-                    <p>
-                        Com gol de Carlito, o alvinegro do Parque São Jorge empatou em 1 a 1 com o São Paulo e levou, de forma invicta, o bicampeonato paulista.
-                    </p>
-
-                    <b>1939 - É tri!</b>
-                    <p>
-                        Pela terceira vez, o Coringão conquistou o tricampeonato estadual. Até hoje, nenhum clube venceu mais de três vezes seguidas o Campeonato Paulista.
-                    </p>
-
-                    <b>1940 - Pacaembu</b>
-                    <p>
-                        No dia 28 de abril, o Timão inaugurou o estádio do Pacaembu, vencendo o Atlético-MG por 4 a 2.
-                    </p>
-
-                    <img src="img/foto_quatorze.jpg" alt="">
-
-                    <b>1942 - Dois campeonatos</b>
-                    <p>
-                        Naquele ano, o Timão conquistou dois títulos. O primeiro deles foi a I Taça Cidade de São Paulo, triangular com os três primeiros colocados do
-                        Paulista do ano anterior. Logo depois, venceu a Quinela de Ouro, disputada por Corinthians, Palestra, São Paulo, Flamengo e Fluminense.
-                    </p>
-
-                    <b>1943 - Taça Paulista</b>
-                    <p>
-                        Além de ser bicampeão da Taça Paulista, a equipe fez novamente o artilheiro do estadual (Hércules, com 19 gols). Apesar disso, o título ficou com o São Paulo.
-                    </p>
-
-                    <img src="img/foto_dezesseis.jpg" alt="">
-
-                    <b>1947 - Sempre na final</b>
-                    <p>
-                        O Corinthians levou o título da Taça Cidade de São Paulo e o vice-campeonato no Paulistão.
-                    </p>
-
-                    <b>1948 - Vitórias internacionais</b>
-                    <p>
-                        Além de vencer novamente a Taça Cidade de São Paulo, o clube conquistou grandes vitórias em amistosos internacionais, realizados no Brasil,
-                        contra o River Plate (ARG) e o Torino (ITA). 
-                    </p>
-
-                    <b>1949 - ìdolos contratados</b>
-                    <p>
-                        Após ficar somente em quinto lugar no Campeonato Paulista, a equipe do Parque São Jorge passou por uma renovação com a contratação de futuros
-                        ídolos do time, como Cabeção, Idário, Roberto e Luizinho.
-                    </p>
-
-                    <img src="img/foto_dezoito.webp" alt="">
-
-                    <b>1952 - Timão internacional</b>
-                    <p>
-                        Baltazar foi o artilheiro do Paulista, com 27 gols, e um dos destaques do bicampeonato. O Timão também fez sua primeira excursão à Europa,
-                        com 12 vitórias, três empates e apenas uma derrota em duelos realizados na Suécia, Turquia, Dinamarca e Finlândia.
-                    </p>
-
-                    <b>1953 - Ano de glórias</b>
-                    <p>
-                        O Coringão venceu pela segunda vez o Rio-São Paulo e levou também a Pequena Taça do Mundo, jogando contra Barcelona (ESP), Roma (ITA) e a Seleção de Caracas, na Venezuela.
-                    </p>
-
-                    <b>1954 - IV centenário</b>
-                    <p>
-                        O Alvinegro foi campeão de três competições naquele ano. Além de vencer o Torneio Rio-São Paulo e o Torneio Charles Miller, o time levou o caneco do Paulista. Ano do
-                        quarto centenário desde a fundação da cidade de São Paulo, o campeonato de 1954 era muito desejado por todos os clubes. O Corinthians o conquistou tendo em seu último
-                        jogo a seguinte escalação: Gilmar, Rafael, Goiano, Homero, Idário, Alan, Nonô, Roberto, Simão, Luizinho e Cláudio.
-                    </p>
-
-                    <img src="img/foto_vinte.jpg" alt="">
-
-                    <b>1958 - Timão no Mundial</b>
-                    <p>
-                        Além de ter vencido o Troféu Charles Miller e o Torneio Brasília, o clube do Parque São Jorge teve grande importância no primeiro título da Seleção Brasileira
-                        da Copa do Mundo. Na Suécia, o goleiro Gilmar e o lateral esquerdo Oreco representaram o país e o Corinthians na conquista inédita.
-                    </p>
-
-                    <b>1959 - Inesquecível</b>
-                    <p>
-                        Vicente Matheus foi eleito presidente do Sport Club Corinthians Paulista. Ficou no Timão durante oito mandatos.
-                    </p>
-
-                    <b>1960 - Sem consquistas</b>
-                    <p>
-                        O Timão contratou Almir, o “Pelé Branco”, pela quantia recorde de 8 milhões de cruzeiros. Mas a equipe não foi tão bem no Paulista e ficou somente com o terceiro lugar.
-                    </p>
-
-                    <img src="img/foto_vintedois.jpeg" alt="">
-
-                    <b>1964 - Luta até o fim</b>
-                    <p>
-                        Com a volta do ídolo Luizinho, o Timão lutou pelo título estadual até o fim, mas não levou.
-                    </p>
-
-                    <b>1965 - Rivellino</b>
-                    <p>
-                        Com Rivellino na equipe, o Timão venceu o Torneio Pentagonal do Recife. Além disso, tornou-se o primeiro clube a vestir a camisa da Selecão no exterior,
-                        mas saiu derrotado pelo Arsenal por 2 a 0 em Londres.
-                    </p>
-
-                    <b>1966 - Rio-São Paulo dividido</b>
-                    <p>
-                        O Corinthians foi campeão do Torneio Rio-São Paulo ao lado de Botafogo, Santos e Vasco por falta de datas para disputar os desempates. Naquele ano,
-                        o clube havia contratado Ditão, Nair e Garrincha, que formavam um time fortíssimo.
-                    </p>
-
-                    <img src="img/foto_vintequatro.jpg" alt="">
-
-                    <b>1969 - Ano tirste</b>
-                    <p>
-                        Com o falecimento do lateral Lidu e do ponta Eduardo, o Timão perdeu a liderança do Paulista e não conquistou a competição.
-                    </p>
-
-                    <b>1970 - Corinthians é Brasil</b>
-                    <p>
-                        Naquele ano, o Corinthians contava com três jogadores da Seleção Brasileira: o goleiro Ado, o meia Rivellino e o lateral Zé Maria. Foi em 70 que o Brasil conquistou o tricampeonato Mundial.
-                    </p>
-
-                    <b>1971 - O primeiro Brasileirão</b>
-                    <p>
-                        No primeiro Campeonato Brasileiro da história, o Alvinegro dominou a primeira fase e foi líder, mas não teve um bom desempenho no final da competição. 
-                    </p>
-
-                    <img src="img/foto_vinteseis.jpg" alt="">
-
-                    <b>1975 - Desempenho baixo</b>
-                    <p>
-                        Basílio e Cesar Maluco foram os reforços da temporada, mas o Alvinegro ficou apenas com o quarto lugar no estadual e em sexto no nacional.
-                    </p>
-
-                    <b>1976 - Invasão Corinthiana</b>
-                    <p>
-                        Calcula-se que cerca de 80 mil corinthianos tenham viajado até o Rio de Janeiro para assistir ao jogo em que o Corinthians empatou com o Fluminense por 1 a 1,
-                        ganhou nos pênaltis (4 a 1) e classificou-se para a decisão do Campeonato Brasileiro de 1976 contra o Internacional. É, até hoje, um dos maiores deslocamentos
-                        pacíficos do homem no mundo.
-                    </p>
-
-                    <img src="img/foto_vinteoito.jpg" alt="">
-
-                    <b>1978 - Chegada de ídolos</b>
-                    <p>
-                        Já com Sócrates, Amaral e Biro-Biro, o Alvinegro ganhou o primeiro turno do Campeonato Paulista, mas não se consagrou campeão.
-                    </p>
-
-                    <b>1979 - Mais um Paulistão</b>
-                    <p>
-                        A decisão do Paulista foi disputada no ano seguinte, tendo o Corinthians como vencedor. Na semifinal, o clube do Parque São Jorge bateu o rival Palmeiras, considerado o melhor time do torneio.
-                    </p>
-
-                    <b>1980 - Bateu na trave</b>
-                    <p>
-                        O Timão tinha tudo para levar o bicampeonato estadual, mas perdeu as semifinais do returno para a Ponte Preta.
-                    </p>
-
-                    <img src="img/foto_trinta.jpg" alt="">
-
-                    <b>1983  - Goleada histórica</b>
-                    <p>
-                        Depois de 30 anos, a equipe do Parque São Jorge foi bicampeã paulista novamente. Assim como no ano anterior, o clube venceu o São Paulo: 1 a 0 no primeiro jogo e 1 a 1 no segundo.
-                        Ainda em 83, o Corinthians aplicou a maior goleada de todos os tempos no Campeonato Brasileiro: 10 a 1 no Tiradentes-PI.
-                    </p>
-
-                    <b>1984 - Sócrates na Europa</b>
-                    <p>
-                        O tri paulista escapou na última rodada com a derrota para o Santos por 1 a 0. Sócrates foi vendido para a Fiorentina (ITA).
-                    </p>
-
-                    <b>1985 - Não brilharam</b>
-                    <p>
-                        Apesar de ter montado um time considerado excelente, a temporada não foi boa para o Corinthians, que não chegou às semifinais nem no Brasileiro nem no Paulista.
-                    </p>
-
-                    <img src="img/foto_trintadois.webp" alt="">
-
-                    <b>1989 - Neto neles!</b>
-                    <p>
-                        O Corinthians não conquistou nenhum título, mas contratou o futuro ídolo Neto naquele ano. 
-                    </p>
-
-                    <b>1990 - Campeão brasileiro</b>
-                    <p>
-                        No dia 16 de dezembro, o Timão levantou o troféu de campeão brasileiro pela primeira vez na história. Com 23 gols marcados em 25 partidas, a equipe do técnico Nelsinho Baptista
-                        venceu o São Paulo por 1 a 0 no último jogo, realizado no Morumbi. Neto marcou nove dos 23 gols, cinco em venenosas cobranças de falta. A escalação do time no dia da
-                        grande final foi: Ronaldo, Giba, Marcelo, Guinei e Jacenir; Márcio, Wilson Mano e Tupãzinho; Neto, Fabinho e Mauro.
-                    </p>
-
-                    <img src="img/foto_trintaquatro.jpg" alt="">
-
-                    <b>1994 - Troféu Bandeirantes</b>
-                    <p>
-                        A equipe do Parque São Jorge conquistou o Troféu Bandeirantes em cima do Santos, que garantiu vaga na Copa do Brasil do ano seguinte.
-                    </p>
-
-                    <b>1995 - Campeão de tudo</b>
-                    <p>
-                        Em um ano espetacular, o Corinthians foi campeão da Copa São Paulo de Juniores, do Campeonato Paulista e da Copa do Brasil. Nesse último, o Alvinegro venceu oito das 10 partidas
-                        disputadas. Os jogos da final foram disputados com o Grêmio. Tanto no Pacaembu quanto no Olímpico, vitórias corinthianas: 2 a 1 em casa e 1 a 0 em Porto Alegre.
-                    </p>
-
-                    <b>1996 - Até na Espanha</b>
-                    <p>
-                        A equipe do Parque São Jorge faturou o troféu Ramón de Carranza, disputado em Cádiz, na Espanha.
-                    </p>
-
-                    <img src="img/foto_trintaseis.jpg" alt="">
-
-                    <b>1999 - Dono do país de novo</b>
-                    <p>
-                        O Corinthians levou mais um Paulista e, pelo segundo ano consecutivo, o Brasileiro. Como havia acontecido no ano anterior, o Alvinegro dominou o nacional de ponta a ponta em 1999.
-                        Os resultados dos três jogos finais foram: Atlético-MG 3 x 2 Corinthians, Corinthians 2 x 0 Atlético-MG e Corinthians 0 x 0 Atlético-MG. A escalação na última partida foi: Dida,
-                        Índio, Márcio Costa, João Carlos e Kléber; Gilmar, Rincón, Vampeta e Ricardinho; Edílson e Marcelinho. Dessa vez, o técnico era Oswaldo de Oliveira. Luizão marcou 21 dos 61 gols
-                        que o Alvinegro fez durante as 29 rodadas. 
-                    </p>
-
-                    <b>2000 - O primeiro Mundial</b>
-                    <p>
-                        O primeiro título mundial de clubes reconhecido pela Fifa veio com uma vitória nos pênaltis contra o Vasco depois do empate sem gols no tempo normal. A escalação da final
-                        foi: Dida, Índio, Adílson, Fábio Luciano e Kléber; Rincón, Vampeta, Ricardinho e Marcelinho; Edílson e Luizão. O Alvinegro fez seis gols em quatro jogos disputados. O segundo tento
-                        de Edílson no empate em 2 a 2 contra o Real Madrid é considerado um dos mais marcantes da história corinthiana. 
-                    </p>
-
-                    <img src="img/foto_trintaoito.webp" alt="">
-
-                    <b>2003 - Título sobre o rival</b>
-                    <p>
-                        Com duas vitórias por 3 a 2 sobre o São Paulo, o Coringão levou o Campeonato Paulista mais uma vez. Rogério, Fábio Luciano e Gil marcaram no primeiro duelo. Na partida final,
-                        Liédson e Jorge Wágner (2) balançaram as redes para delírio da Fiel. O clube também aplicou uma goleada histórica naquele ano: 6 a 1 em cima do Paysandu pelo Brasileirão.
-                    </p>
-
-                    <b>2004 - Preparação para o tetra</b>
-                    <p>
-                        O Timão teve uma campanha discreta no Brasileiro, ficando apenas com o quinto lugar.
-                    </p>
-
-                    <b>2005 - Campeão galático</b>
-                    <p>
-                        Com um elenco de estrelas, o Corinthians conquistou o tetracampeonato brasileiro. Sob o comando do atacante argentino Carlitos Tevez, que marcou 20 gols no torneio, o clube venceu
-                        24 partidas e empatou nove, mesmo número de derrotas. Um dos duelos mais memoráveis foi o 7 a 1 em cima do rival Santos. A equipe do técnico Antônio Lopes marcou 87 gols e sofreu 29.
-                        A escalação da última partida foi: Fábio Costa, Marinho, Wendel, Coelho e Gustavo Nery; Marcelo Mattos, Rosinei, Bruno Octávio e Carlos Alberto; Nilmar e Tevez. O argentino ainda foi
-                        eleito o melhor jogador da competição. 
-                    </p>
-
-                    <img src="img/foto_quarenta.avif" alt="">
-
-                    <b>2009 - Ano fenomenal</b>
-                    <p>
-                        Um dos maiores ídolos do futebol de todos os tempos foi o principal nome daquele ano no Corinthians. Ronaldo, o Fenômeno, marcou o gol mais bonito de sua carreira no primeiro jogo
-                        da final do Paulistão contra o Santos. Com a vitória por 3 a 1, bastou um empate em 1 a 1 na volta para o Alvinegro levar o caneco de forma invicta. Dois meses depois, em julho, 
-                         Timão venceu o Internacional em casa por 2 a 0 no primeiro duelo da final da Copa do Brasil. Em Porto Alegre, o resultado de 2 a 2 garantiu mais um título ao Coringão.
-                    </p>
-
-                    <img src="img/foto_quarentadois.jpg" alt="">
-
-                    <b>2011 - Pentacampeonato brasileiro</b>
-                    <p>
-                        Em um empate sem gols contra o seu maior rival, o Timão conquistou, pela quinta vez, o Campeonato Brasileiro. A campanha do Alvinegro foi de 21 vitórias, oito empates e nove derrotas.
-                        A equipe de 2011 ficou conhecida pela regularidade dentro e fora de casa, além de uma excelente defesa. Liédson foi o artilheiro corinthiano com 12 gols. A escalação no último jogo
-                        foi: Júlio César, Alessandro, Paulo André, Leandro Castán e Fábio Santos; Wallace, Paulinho e Alex; Willian, Jorge Henrique e Liédson. No mesmo ano, o estádio do Corinthians, em construção,
-                        foi nomeado oficialmente a sede da abertura da Copa do Mundo 2014.
-                    </p>
-
-                    <b>2012 - O ano inesquecível</b>
-                    <p>
-                        Pela primeira vez na história, o Corinthians foi campeão da Libertadores. E, para ser perfeito, de forma invicta! Foram 22 gols marcados e apenas quatro sofridos em oito vitórias e
-                        seis empates. O atacante Emerson marcou os gols da vitória por 2 a 0 contra o Boca Juniors (ARG) no jogo de volta da grande final. A escalação da partida foi: Cássio, Alessandro,
-                        Chicão, Leandro Castán e Fábio Santos; Ralf, Paulinho, Danilo e Alex; Jorge Henrique e Emerson. O gol de cabeça Paulinho contra o Vasco, que levou o Corinthians às semifinais da
-                        Libertadores, já é considerado por muitos o mais marcante da história do clube. Além disso, o Timão conquistou a Copinha também de forma invicta e teve um atleta medalhista olímpico
-                        em Londres. O nadador Thiago Pereira ficou com a prata nos 400m medley. Em dezembro, o Bando de Loucos invadiu o Japão e viu o Corinthians conquistar o Mundial de Clubes da Fifa pela
-                        segunda vez. Guerrero marcou de cabeça e garantiu o título contra o Chelsea no ano que se tornou inesquecível para a Fiel Torcida.
-                    </p>
-                </div>
-
-
-
-
-    
-                <div id="coluna_2">
-                    <img src="img/foto_um.jpg" alt="">
-
-                    <b>1911 - Fora de casa</b>
-                    <p>
-                        Primeiro jogo do Timão fora da cidade de São Paulo. Na manhã de 17 de setembro, vitória sobre a Ponte Preta em Campinas por 1 a 0.
-                    </p>
-
-                    <b>1912 - Jogos na várzea</b>
-                    <p>
-                        Registro de jogos na várzea cujos resultados não foram encontrados. Os adversários foram Paulista, Concórdia, Botafogo, Minas Gerais, Maranhão e Vila Mariana.
-                    </p>
-
-                    <b>1913 - Estreia no Paulista</b>
-                    <p>
-                        Pela primeira vez, o Corinthians participou do campeonato da Liga Paulista de Futebol. O Alvinegro terminou em quarto lugar entre cinco equipes.
-                    </p>
-
-                    <img src="img/foto_tres.jpg" alt="">
-
-                    <b>1916 - Campeão</b>
-                    <p>
-                        De volta ao campeonato da Liga Paulista de Futebol, o Timão foi novamente campeão com 100% de aproveitamento: nove vitórias em nove jogos.
-                        Apparício foi o artilheiro do torneio com sete gols.
-                    </p>
-
-                    <b>1917 - Rivalidades antigas</b>
-                    <p>
-                        O Corinthians disputou pela primeira vez o Campeonato Paulista ao lado de seus maiores rivais na época. Terminou em quarto lugar, atrás do
-                        Paulistano (campeão), do Palestra Itália (vice) e do Santos (terceiro).
-                    </p>
-
-                    <b>1918 - O primeiro estádio</b>
-                    <p>
-                        Em suas horas de folga, os jogadores alvinegros construíram o gramado do primeiro estádio oficial corinthiano. Nomeado como Ponte Grande,
-                        a casa do Timão ficava onde hoje é a Ponte das Bandeiras, na Marginal Tietê.
-                    </p>
-
-                    <img src="img/foto_cinco.jpg" alt="">
-
-                    <b>1923 - Bicampeonato Paulista</b>
-                    <p>
-                        Pela primeira vez, o clube foi bicampeão paulista. Líder do turno inicial, o time começou o segundo com seis pontos de vantagem e só
-                        precisaria vencer três dos sete jogos restantes para levar o caneco.
-                    </p>
-
-                    <b>1924 - O primeiro tri</b>
-                    <p>
-                        Mantendo a hegemonia no estadual, o Alvinegro conquistou o primeiro tricampeonato paulista. A Revolução Tenentista fez o torneio ser
-                        interrompido, mas, na volta, o título foi garantido com uma vitória sobre o Paulistano por 1 a 0.
-                    </p>
-
-                    <b>1925 - Por pouco</b>
-                    <p>
-                        O Timão quase chegou ao tetra. O Paulistano se retirou do campeonato, mas os resultados de seus jogos não foram descontados. Caso tivessem
-                        sido, o clube terminaria na frente do campeão A. A. São Bento. 
-                    </p>
-
-                    <img src="img/foto_sete.jpg" alt="">
-
-                    <b>1929 - Mosqueteiro</b>
-                    <p>
-                        O Alvinegro foi bicampeão do Campeonato Paulista novamente e, dessa vez, com 100% de aproveitamento: sete vitórias em sete jogos. No mesmo ano,
-                        a equipe venceu sua primeira partida internacional. Na ocasião, o Corinthians venceu o Barracas (ARG) por 3 a 1 no Parque São Jorge. Apparício,
-                        Rato e Rodrigues marcaram os gols da virada. No dia seguinte, o jornalista Thomaz Mazzoni, do impresso A Gazeta, relatou a partida destacando
-                        a “fibra de mosqueteiro” demonstrada pelos jogadores. Nesse mesmo ano, a Gazeta criou diversos mascotes aos times e, consequentemente, atribuiu
-                        o Mosqueteiro ao Timão.
-                    </p>
-
-                    <img src="img/foto_nove.jpg" alt="">
-
-                    <b>1932 - Estadual fraco</b>
-                    <p>
-                        Com uma campanha discreta, o Corinthians terminou o campeonato estadual em quarto lugar. Em meio à Revolução Constitucionalista, a competição
-                        foi disputada em somente um turno, vencido pelo Palestra.
-                    </p>
-
-                    <b>1933 - Técnico do Uruguai</b>
-                    <p>
-                        O Timão contratou seu primeiro técnico de futebol remunerado, o uruguaio Pedro Mazzulo. A campanha no Paulista foi novamente o quarto lugar.
-                    </p>
-
-                    <img src="img/foto_onze.jpg" alt="">
-
-                    <b>1936 - Invicto</b>
-                    <p>
-                        Invicto! Durante o ano inteiro, o Corinthians não perdeu nenhum jogo. Foram 28 vitórias e três empates, incluindo as partidas amistosas. O Timão
-                        venceu o primeiro turno do Paulista, mas perdeu a final para o Palestra, campeão do returno, já em 1937.
-                    </p>
-
-                    <b>1937 - Mais um Paulistão</b>
-                    <p>
-                        No campeonato estadual daquele ano, o clube do Parque São Jorge levou o caneco. O duelo mais marcante foi o da vitória sobre o Palestra por 1 a 0 na
-                        antepenúltima rodada, com gol de Teleco.
-                    </p>
-
-                    <img src="img/foto_treze.jpg" alt="">
-
-
-                    <b>1941 - Artilharia e título</b>
-                    <p>
-                        Pela quinta vez, Teleco foi artilheiro do Paulistão. O atacante marcou 26 gols e foi um dos grandes nomes da conquista da competição. O Corinthians
-                        conquistou o campeonato com duas rodadas de antecedência ao derrotar o Santos por 3 a 2 na Vila Belmiro.
-                    </p>
-
-                    <img src="img/foto_quinze.jpg" alt="">
-
-                    <b>1944 - Torneio Início</b>
-                    <p>
-                        Naquele ano, o Timão contratou o zagueiro Domingos da Guia, venceu o Torneio Início e ficou em terceiro lugar no Paulista.
-                    </p>
-
-                    <b>1945 - O artilheiro Servílio</b>
-                    <p>
-                        Apesar de não ter faturado nenhum título, o Coringão novamente foi dono do artilheiro do Paulista: Servílio, com 17 gols.
-                    </p>
-
-                    <b>1946 - Chegou perto</b>
-                    <p>
-                        Mesmo com 18 vitórias e apenas duas derrotas em 20 jogos, o Alvinegro ficou com o segundo lugar no estadual.
-                    </p>
-
-                    <img src="img/foto_dezessete.avif" alt="">
-
-                    <b>1950 - O primeiro Rio-São Paulo</b>
-                    <p>
-                        Com 20 gols em sete jogos, o Timão conquistou o primeiro Torneio Rio-São Paulo de sua história. O último jogo terminou
-                        no empate em 1 a 1 com o Botafogo no Pacaembu. A escalação do duelo foi Bino, Newton e Belfare; Idário, Touguinha e Hélio;
-                        Cláudio, Luizinho, Baltazar, Nelsinho e Noronha.
-                    </p>
-
-                    <b>1951 - O ataque dos 100 gols</b>
-                    <p>
-                        Após 10 anos, o Alvinegro foi campeão paulista novamente. O ataque formado por Cláudio, Luizinho, Baltazar, Carbone e Mário
-                        fez 103 gols em apenas 30 jogos. No mesmo ano, o Corinthians disputou sua primeira partida fora do Brasil. No Torneio
-                        Internacional/Quadrangular de Montevidéu, o clube derrotou o Combinado Uruguaio por 4 a 1 no estádio de Montevidéu.
-                    </p>
-
-                    <img src="img/foto_dezenove.webp" alt="">
-
-                    <b>1955 - Em cima dos lusos</b>
-                    <p>
-                        Com uma vitória por 2 a 1 em cima do Benfica (POR) no Pacaembu, o Timão conquistou o Torneio Internacional Charles Miller.
-                    </p>
-
-                    <b>1956 - Taça dos invictos</b>
-                    <p>
-                        Pela primeira vez, o Corinthians levou a cobiçada Taça dos Invictos, por conta de seus 25 jogos sem derrota no Paulista.
-                        Foram 17 vitórias e oito empates. Apesar disso, o Alvinegro terminou o campeonato apenas na terceira posição.
-                    </p>
-
-                    <b>1957 - Dono definitivo</b>
-                    <p>
-                        O Coringão ficou com o segundo lugar no Campeonato Paulista, mas tornou-se dono definitivo da Taça dos Invictos. Foram 35 jogos sem perder na competição, com 25 vitórias e 10 empates.
-                    </p>
-
-                    <img src="img/foto_vinteum.jpg" alt="">
-
-                    <b>1961 - Campanha fraca</b>
-                    <p>
-                        Com uma campanha discreta, o Alvinegro terminou o Paulista na sexta posição. 
-                    </p>
-
-                    <b>1962 - I Taça São Paulo</b>
-                    <p>
-                        Naquele ano, o clube foi campeão da I Taça São Paulo, torneio eliminatório envolvendo equipes de todas as divisões de SP.
-                    </p>
-
-                    <b>1963 - Três comandantes</b>
-                    <p>
-                        O Corinthians foi comandado por três técnicos em 1963: Fleitas Solich, Rato e Del Debbio. Porém, foi somente o nono colocado entre os 16 participantes do Paulistão.
-                    </p>
-
-                    <img src="img/foto_vintetres.jpg" alt="">
-
-                    <b>1967 - Não foi longe</b>
-                    <p>
-                        Liderou a primeira fase do torneio Robertão, mas não teve bons resultados no quadrangular final.
-                    </p>
-
-                    <b>1968 - A quebra do tabu</b>
-                    <p>
-                        Com gols de Paulo Borges e Flávio, o Coringão venceu o Santos por 2 a 0 e quebrou um tabu de 11 anos sem derrotar a equipe do litoral paulista. Na noite de 06 de março,
-                        a equipe alvinegra entrou no Pacaembu com a seguinte escalação: Diogo, Osvaldo Cunha, Ditão, Luís Carlos e Maciel; Édson Cegonha e Rivelino; Buião, Paulo Borges, Flávio e Eduardo.
-                    </p>
-
-                    <img src="img/foto_vintecinco.jpg" alt="">
-
-                    <b>1972 - Passou perto</b>
-                    <p>
-                        Semifinalista no Brasileiro, o clube perdeu para o Botafogo a chance de decidir o título contra o Palmeiras.
-                    </p>
-
-                    <b>1973 - Ano discreto</b>
-                    <p>
-                        Com o técnico “linha-dura” Yustrich, o time do Parque São Jorge teve uma campanha discreta no Paulista (quarto lugar) e no Brasileiro (12º lugar).
-                    </p>
-
-                    <b>1974 - Final complicada</b>
-                    <p>
-                        O Timão voltou a disputar o título paulista diretamente em um jogo após 17 anos. A derrota para o Palmeiras na decisão resultou na saída de Rivellino para o Fluminense.
-                    </p>
-
-                    <img src="img/foto_vintesete.jpg" alt="">
-
-                    <b>1977 - Fim do jejum</b>
-                    <p>
-                        Depois de 22 anos, oito meses e sete dias, o Corinthians era novamente campeão paulista. O gol foi marcado por Basílio na final do Campeonato Paulista na vitória
-                        por 1 a 0 sobre a Ponte Preta, realizada no Morumbi no dia 13 de outubro. Quatro dias antes, o estádio registrou seu maior público: 146.072 pessoas acompanharam
-                        um dos jogos da final entre as equipes. O Timão terminou a competição com 72 gols marcados em 48 partidas. No time do técnico Oswaldo Brandão, o artilheiro do torneio
-                        foi Geraldão, com 25 gols.
-                    </p>
-
-                    <img src="img/foto_vintenove.webp" alt="">
-
-                    <b>1981 - Campanha ruim</b>
-                    <p>
-                        O Alvinegro não realizou boas campanhas no Paulista e no Brasileiro. O oitavo lugar no estadual levaram a equipe a disputar a Taça de Prata. 
-                    </p>
-
-                    <b>1982 - Democracia Corinthiana</b>
-                    <p>
-                        Embalado pelos ideais da Democracia Corinthiana, o Timão foi campeão paulista naquele ano. O movimento visava maior participação dos jogadores e demais empregados
-                        do clube nas decisões do Departamento de Futebol. Durou até 1985 e contou com um grupo de jogadores talentosos e únicos, como Sócrates, Casagrande, Zenon, Biro-Biro,
-                        Zé Maria e Wladimir, entre outros.
-                    </p>
-                    
-                    <img src="img/foto_trintaum.avif" alt="">
-
-                    <b>1986 - Rivalidade maior</b>
-                    <p>
-                        O Timão chegou às semifinais do Paulista, mas não passou do Palmeiras. No nacional, foi até as quartas.
-                    </p>
-
-                    <b>1987 - Campanha memorável</b>
-                    <p>
-                        No Campeonato Paulista, o Corinthians saiu da penúltima colocação no primeiro turno para um histórico vice-campeonato.
-                    </p>
-
-                    <b>1988 - O 20° Paulistão</b>
-                    <p>
-                        No ano do centenário da abolição da escravatura, Viola marcou na prorrogação, garantiu a vitória alvinegra sobre o Guarani por 1 a 0 e o 20º título paulista do clube.
-                    </p>
-
-                    <img src="img/foto_trintatres.jpg" alt="">
-
-                    <b>1991 - Vice-campeão</b>
-                    <p>
-                        O Corinthians voltou a disputar a Libertadores depois de 14 anos, mas caiu nas oitavas de final diante do Boca Juniors (ARG). No Paulistão, ficou com o vice-campeonato.
-                    </p>
-
-                    <b>1992 - Desempenho médio</b>
-                    <p>
-                        O Alvinegro ficou com a terceira posição no estadual e com o quinto lugar no Brasileiro.
-                    </p>
-
-                    <b>1993 - Fora da final</b>
-                    <p>
-                        No Campeonato Brasileiro, mesmo tendo perdido somente para o Vitória, em Salvador, o time ficou de fora da decisão.
-                    </p>
-
-                    <img src="img/foto_trintacinco.jpg" alt="">
-
-                    <b>1997 - O rei do estadual</b>
-                    <p>
-                        Com jogadores como Antônio Carlos, Túlio e Donizete, o Alvinegro venceu mais um Paulista.
-                    </p>
-
-                    <b>1998 - O Brasil é alvinegro</b>
-                    <p>
-                        Após os empates em 2 a 2 e 1 a 1 nos primeiros jogos, o Timão venceu o Cruzeiro por 2 a 0 na última partida com gols de Edílson e Marcelinho Carioca, sagrando-se bicampeão Brasileiro.
-                        No dia 23 de dezembro, a escalação da equipe foi: Nei, Índio, Batata, Gamarra e Silvinho; Ricardinho, Vampeta, Rincón e Marcelinho; Edílson e Mirandinha. A equipe de
-                        Vanderlei Luxemburgo marcou 57 gols em 32 duelos, sendo que 19 deles foram do artilheiro Marcelinho Carioca. 
-                    </p>
-
-                    <img src="img/foto_trintasete.jpg" alt="">
-
-                    <b>2001 - Gol inesquecível</b>
-                    <p>
-                        O Coringão faturou mais uma vez o título do Campeonato Paulista. Porém, a cena que vai ficar marcada para sempre na memória da Fiel é o gol de Ricardinho contra o Santos na
-                        semifinal. Nos últimos segundos do jogo decisivo, o meia fez 2 a 1 para o Alvinegro e garantiu a equipe na final.
-                    </p>
-
-                    <b>2002 - Ano fantástico</b>
-                    <p>
-                        Sob o comando do técnico Carlos Alberto Parreira, o Timão teve um ano glorioso. No dia 12 de maio, foi campeão do Rio-São Paulo em cima do tricolor paulista com a vitória por 3 a 2 na
-                        primeira partida da final e com o empate em 1 a 1 no segundo jogo. Três dias depois, o Corinthians levantou mais um troféu. Contra o Brasiliense, o Alvinegro faturou a Copa do Brasil
-                        pela segunda vez. No duelo de ida, 2 a 1 para o time paulista. Já na volta, a partida terminou com um gol para cada equipe.
-                    </p>
-
-                    <img src="img/foto_trintanove.webp" alt="">
-
-                    <b>2006 - Campanha fraca</b>
-                    <p>
-                        Com o desmanche do elenco, o Alvinegro foi mal no Brasileiro e se esforçou para continuar na série A. 
-                    </p>
-
-                    <b>2007 - o pior episódio da história</b>
-                    <p>
-                        No pior ano da história do clube, o Timão foi rebaixado para a série B do Campeonato Brasileiro.
-                    </p>
-
-                    <b>2008 - O Coringão voltou</b>
-                    <p>
-                        Sob a liderança do técnico Mano Menezes, o Corinthians teve uma ótima campanha na série B e conquistou o título com quatro rodadas de antecedência. Foram 79 gols marcados em 38 duelos.
-                        A última partida foi realizada no Pacaembu, com vitória corinthiana por 3 a 2 sobre o Avaí. Os atacantes Dentinho e Herrera foram os artilheiros da equipe, com 14 gols cada.
-                    </p>
-
-                    <img src="img/foto_quarentaum.webp" alt="">
-
-                    <b>2010 - Centenário Corinthiano</b>
-                    <p>
-                        Apesar de não ter levado nenhum título em 2010, o ano foi de muita festa para a Fiel Torcida por conta do Centenário Corinthiano. No dia 1º de setembro, mais de 100 mil loucos do
-                        bando lotaram o Anhangabaú para as comemorações de aniversário do Timão. Em novembro, Ronaldo Fenômeno marcou o último gol de sua carreira como profissional. De pênalti, o eterno
-                        camisa 9 fez o gol da vitória por 1 a 0 sobre o Cruzeiro.
-                    </p>
-
-                    <img src="img/foto_quarentatres.jpg" alt="">
-
-                   <img src="img/foto_" alt="">
-                </div>
-            </div>
-            
+    <div id="div_titulos">
+        <div>PAULISTÃO <p id="qtd_paulistao"></p>
+        </div>
+        <div>BRASILEIRÃO <p id="qtd_brasileirao"></p>
+        </div>
+        <div>COPA DO BRASIL <p id="qtd_cdb"></p>
+        </div>
+        <div>LIBERTADORES <p id="qtd_libertadores"></p>
+        </div>
+        <div>MUNDIAL <p id="qtd_mundial"></p>
+        </div>
     </div>
-    
+
+    <div id="div_historia">
+
+        <div id="colunas">
+            <div id="coluna_1">
+                <b>1910 - A fundação</b>
+                <p>
+                    Às 20h30 do dia 1º de setembro, à luz de um lampião, na esquina das ruas José Paulino e Cônego
+                    Martins, no bairro do Bom Retiro,
+                    o grupo de operários formado por Anselmo Corrêa, Antônio Pereira, Carlos Silva, Joaquim Ambrósio e
+                    Raphael Perrone fundaram o
+                    Sport Club Corinthians Paulista. Com mais oito rapazes, foi formada a reunião dos primeiros
+                    integrantes e sócio fundadores do Timão,
+                    que teve seu nome inspirado na equipe inglesa Corinthian Football Club, que fazia excursão pelo
+                    Brasil. O presidente escolhido por
+                    eles foi o alfaiate Miguel Battaglia, que, já no primeiro momento, afirmou: “O Corinthians vai ser o
+                    time do povo e o povo é quem
+                    vai fazer o time”. Um terreno alugado na Rua José Paulino foi aplainado, virou campo e foi lá que,
+                    já no dia 14 de setembro, o primeiro
+                    treino foi realizado diante de uma plateia entusiasmada, que garantiu: “Este veio para ficar!”.
+                </p>
+
+                <img src="img/foto_dois.jpg" alt="">
+
+                <b>1914 - O primeiro título</b>
+                <p>
+                    Primeiro título do Sport Club Corinthians Paulista. Com 10 vitórias em 10 jogos disputados, o Timão
+                    marcou 37 gols e venceu a última
+                    partida por 3 a 0, contra o Lusitano, no Parque Antártica. O atacante Neco foi o artilheiro do
+                    torneio com 12 gols. O Alvinegro conquistou
+                    o Campeonato Paulista com uma rodada de antecedência. No dia 08 de novembro, a equipe derrotou o
+                    Campos Elyseos por 4 a 0 e sagrou-se campeã
+                    com a seguinte escalação: Aristides, Fúlvio e Casemiro González; Police, Bianco e César Nunes;
+                    Américo, Peres, Amílcar, Apparício e Neco.
+                </p>
+
+                <b>1915 - Ano discreto</b>
+                <p>
+                    O Alvinegro deixou a Liga Paulista de Futebol por conta de uma vaga desejada no campeonato da
+                    Associação Paulista de Esportes Atléticos,
+                    onde jogavam os grandes times da época. Porém, ficou de fora das duas competições.
+                </p>
+
+                <img src="img/foto_quatro.jpg" alt="">
+
+                <b>1919 - Torneio Início</b>
+                <p>
+                    Campeão do primeiro Torneio Início da história do futebol de São Paulo. No mesmo ano, o Alvinegro
+                    conquistou a primeira vitória sobre o
+                    Palestra Itália em jogos de campeonato. No Parque Antártica, o ponta-direita Américo marcou o gol
+                    que definiu o resultado da partida: 1 a 0.
+                </p>
+
+                <b>1920 - O artilheiro Neco</b>
+                <p>
+                    O Corinthians foi bicampeão do Torneio Início. Com 24 gols, Neco foi novamente o artilheiro do
+                    Campeonato Paulista. O ataque alvinegro atingiu
+                    a marca de 75 gols em 17 jogos.
+                </p>
+
+                <b>1921- Ficou no quase</b>
+                <p>
+                    No Natal, o Timão precisava vencer o Palestra para ser campeão. O adversário, porém, levou a melhor
+                    e tirou o título do Alvinegro.
+                </p>
+
+                <b>1922 - Centenário da Independência</b>
+                <p>
+                    O Corinthians foi campeão paulista no ano do Centenário da Independência do Brasil. O jogo,
+                    disputado em fevereiro do ano seguinte,
+                    terminou em 2 a 0 sobre o Paulistano no campo da Floresta.
+                </p>
+
+                <img src="img/foto_seis.jpg" alt="">
+
+                <b>1926 - Parque São Jorge</b>
+                <p>
+                    O Corinthians comprou o terreno do Parque São Jorge, cujo campo seria reformado e reinaugurado dois
+                    anos depois.
+                </p>
+
+                <b>1927 - Ano de participações</b>
+                <p>
+                    A equipe alvinegra não levantou nenhuma taça no ano, mas participou de dois campeonatos paulistas
+                    diferentes: o da
+                    Liga dos Amadores de Futebol (LAF) e o da Associação Paulista de Esportes Atléticos (Apea).
+                </p>
+
+                <b>1928 - A fazendinha</b>
+                <p>
+                    No dia 22 de julho, o Parque São Jorge foi reinaugurado no empate em 2 a 2 contra o América-RJ. Com
+                    a ilustre defesa
+                    formada por Tuffy, Grané e Del Debbio, o clube voltou a conquistar o Paulista no final do ano.
+                </p>
+
+                <img src="img/foto_oito.jpg" alt="">
+
+                <b>1930 - O campeão dos campeões</b>
+                <p>
+                    Em 1930, o Timão fechou a década com seis conquistas do Campeonato Paulista em 10 disputados. Foi o
+                    segundo tricampeonato alvinegro.
+                    Logo depois, o Corinthians venceu o Vasco, campeão carioca, por 3 a 2. Por conta desse resultado,
+                    passou a ser chamado de “Campeão dos Campeões”.
+                </p>
+
+                <b>1931 - Venda de estrelas</b>
+                <p>
+                    Devido ao ótimo desempenho do clube, quatro titulares da equipe tricampeã foram vendidos para a
+                    Lazio, da Itália. Sem Del Debbio, Filó, Rato e
+                    De Maria, o Alvinegro ficou enfraquecido e não passou do sexto lugar no Paulista.
+                </p>
+
+                <img src="img/foto_dez.jpg" alt="">
+
+                <b>1934 - o futuro ídolo Teleco</b>
+                <p>
+                    No final do ano, o Corinthians ganhou um grande reforço: Teleco. O centroavante paranaense viria a
+                    se tornar um dos maiores artilheiros do clube.
+                </p>
+
+                <b>1935 - Não deu</b>
+                <p>
+                    O Alvinegro brigou pelo título paulista até o fim com os reforços de Jaú, De Maria e Brandão, mas
+                    terminou em terceiro lugar. Teleco foi o
+                    artilheiro da competição com nove gols.
+                </p>
+
+                <img src="img/foto_doze.webp" alt="">
+
+                <b>1938 - Nenhuma derrota</b>
+                <p>
+                    Com gol de Carlito, o alvinegro do Parque São Jorge empatou em 1 a 1 com o São Paulo e levou, de
+                    forma invicta, o bicampeonato paulista.
+                </p>
+
+                <b>1939 - É tri!</b>
+                <p>
+                    Pela terceira vez, o Coringão conquistou o tricampeonato estadual. Até hoje, nenhum clube venceu
+                    mais de três vezes seguidas o Campeonato Paulista.
+                </p>
+
+                <b>1940 - Pacaembu</b>
+                <p>
+                    No dia 28 de abril, o Timão inaugurou o estádio do Pacaembu, vencendo o Atlético-MG por 4 a 2.
+                </p>
+
+                <img src="img/foto_quatorze.jpg" alt="">
+
+                <b>1942 - Dois campeonatos</b>
+                <p>
+                    Naquele ano, o Timão conquistou dois títulos. O primeiro deles foi a I Taça Cidade de São Paulo,
+                    triangular com os três primeiros colocados do
+                    Paulista do ano anterior. Logo depois, venceu a Quinela de Ouro, disputada por Corinthians,
+                    Palestra, São Paulo, Flamengo e Fluminense.
+                </p>
+
+                <b>1943 - Taça Paulista</b>
+                <p>
+                    Além de ser bicampeão da Taça Paulista, a equipe fez novamente o artilheiro do estadual (Hércules,
+                    com 19 gols). Apesar disso, o título ficou com o São Paulo.
+                </p>
+
+                <img src="img/foto_dezesseis.jpg" alt="">
+
+                <b>1947 - Sempre na final</b>
+                <p>
+                    O Corinthians levou o título da Taça Cidade de São Paulo e o vice-campeonato no Paulistão.
+                </p>
+
+                <b>1948 - Vitórias internacionais</b>
+                <p>
+                    Além de vencer novamente a Taça Cidade de São Paulo, o clube conquistou grandes vitórias em
+                    amistosos internacionais, realizados no Brasil,
+                    contra o River Plate (ARG) e o Torino (ITA).
+                </p>
+
+                <b>1949 - ìdolos contratados</b>
+                <p>
+                    Após ficar somente em quinto lugar no Campeonato Paulista, a equipe do Parque São Jorge passou por
+                    uma renovação com a contratação de futuros
+                    ídolos do time, como Cabeção, Idário, Roberto e Luizinho.
+                </p>
+
+                <img src="img/foto_dezoito.webp" alt="">
+
+                <b>1952 - Timão internacional</b>
+                <p>
+                    Baltazar foi o artilheiro do Paulista, com 27 gols, e um dos destaques do bicampeonato. O Timão
+                    também fez sua primeira excursão à Europa,
+                    com 12 vitórias, três empates e apenas uma derrota em duelos realizados na Suécia, Turquia,
+                    Dinamarca e Finlândia.
+                </p>
+
+                <b>1953 - Ano de glórias</b>
+                <p>
+                    O Coringão venceu pela segunda vez o Rio-São Paulo e levou também a Pequena Taça do Mundo, jogando
+                    contra Barcelona (ESP), Roma (ITA) e a Seleção de Caracas, na Venezuela.
+                </p>
+
+                <b>1954 - IV centenário</b>
+                <p>
+                    O Alvinegro foi campeão de três competições naquele ano. Além de vencer o Torneio Rio-São Paulo e o
+                    Torneio Charles Miller, o time levou o caneco do Paulista. Ano do
+                    quarto centenário desde a fundação da cidade de São Paulo, o campeonato de 1954 era muito desejado
+                    por todos os clubes. O Corinthians o conquistou tendo em seu último
+                    jogo a seguinte escalação: Gilmar, Rafael, Goiano, Homero, Idário, Alan, Nonô, Roberto, Simão,
+                    Luizinho e Cláudio.
+                </p>
+
+                <img src="img/foto_vinte.jpg" alt="">
+
+                <b>1958 - Timão no Mundial</b>
+                <p>
+                    Além de ter vencido o Troféu Charles Miller e o Torneio Brasília, o clube do Parque São Jorge teve
+                    grande importância no primeiro título da Seleção Brasileira
+                    da Copa do Mundo. Na Suécia, o goleiro Gilmar e o lateral esquerdo Oreco representaram o país e o
+                    Corinthians na conquista inédita.
+                </p>
+
+                <b>1959 - Inesquecível</b>
+                <p>
+                    Vicente Matheus foi eleito presidente do Sport Club Corinthians Paulista. Ficou no Timão durante
+                    oito mandatos.
+                </p>
+
+                <b>1960 - Sem consquistas</b>
+                <p>
+                    O Timão contratou Almir, o “Pelé Branco”, pela quantia recorde de 8 milhões de cruzeiros. Mas a
+                    equipe não foi tão bem no Paulista e ficou somente com o terceiro lugar.
+                </p>
+
+                <img src="img/foto_vintedois.jpeg" alt="">
+
+                <b>1964 - Luta até o fim</b>
+                <p>
+                    Com a volta do ídolo Luizinho, o Timão lutou pelo título estadual até o fim, mas não levou.
+                </p>
+
+                <b>1965 - Rivellino</b>
+                <p>
+                    Com Rivellino na equipe, o Timão venceu o Torneio Pentagonal do Recife. Além disso, tornou-se o
+                    primeiro clube a vestir a camisa da Selecão no exterior,
+                    mas saiu derrotado pelo Arsenal por 2 a 0 em Londres.
+                </p>
+
+                <b>1966 - Rio-São Paulo dividido</b>
+                <p>
+                    O Corinthians foi campeão do Torneio Rio-São Paulo ao lado de Botafogo, Santos e Vasco por falta de
+                    datas para disputar os desempates. Naquele ano,
+                    o clube havia contratado Ditão, Nair e Garrincha, que formavam um time fortíssimo.
+                </p>
+
+                <img src="img/foto_vintequatro.jpg" alt="">
+
+                <b>1969 - Ano tirste</b>
+                <p>
+                    Com o falecimento do lateral Lidu e do ponta Eduardo, o Timão perdeu a liderança do Paulista e não
+                    conquistou a competição.
+                </p>
+
+                <b>1970 - Corinthians é Brasil</b>
+                <p>
+                    Naquele ano, o Corinthians contava com três jogadores da Seleção Brasileira: o goleiro Ado, o meia
+                    Rivellino e o lateral Zé Maria. Foi em 70 que o Brasil conquistou o tricampeonato Mundial.
+                </p>
+
+                <b>1971 - O primeiro Brasileirão</b>
+                <p>
+                    No primeiro Campeonato Brasileiro da história, o Alvinegro dominou a primeira fase e foi líder, mas
+                    não teve um bom desempenho no final da competição.
+                </p>
+
+                <img src="img/foto_vinteseis.jpg" alt="">
+
+                <b>1975 - Desempenho baixo</b>
+                <p>
+                    Basílio e Cesar Maluco foram os reforços da temporada, mas o Alvinegro ficou apenas com o quarto
+                    lugar no estadual e em sexto no nacional.
+                </p>
+
+                <b>1976 - Invasão Corinthiana</b>
+                <p>
+                    Calcula-se que cerca de 80 mil corinthianos tenham viajado até o Rio de Janeiro para assistir ao
+                    jogo em que o Corinthians empatou com o Fluminense por 1 a 1,
+                    ganhou nos pênaltis (4 a 1) e classificou-se para a decisão do Campeonato Brasileiro de 1976 contra
+                    o Internacional. É, até hoje, um dos maiores deslocamentos
+                    pacíficos do homem no mundo.
+                </p>
+
+                <img src="img/foto_vinteoito.jpg" alt="">
+
+                <b>1978 - Chegada de ídolos</b>
+                <p>
+                    Já com Sócrates, Amaral e Biro-Biro, o Alvinegro ganhou o primeiro turno do Campeonato Paulista, mas
+                    não se consagrou campeão.
+                </p>
+
+                <b>1979 - Mais um Paulistão</b>
+                <p>
+                    A decisão do Paulista foi disputada no ano seguinte, tendo o Corinthians como vencedor. Na
+                    semifinal, o clube do Parque São Jorge bateu o rival Palmeiras, considerado o melhor time do
+                    torneio.
+                </p>
+
+                <b>1980 - Bateu na trave</b>
+                <p>
+                    O Timão tinha tudo para levar o bicampeonato estadual, mas perdeu as semifinais do returno para a
+                    Ponte Preta.
+                </p>
+
+                <img src="img/foto_trinta.jpg" alt="">
+
+                <b>1983 - Goleada histórica</b>
+                <p>
+                    Depois de 30 anos, a equipe do Parque São Jorge foi bicampeã paulista novamente. Assim como no ano
+                    anterior, o clube venceu o São Paulo: 1 a 0 no primeiro jogo e 1 a 1 no segundo.
+                    Ainda em 83, o Corinthians aplicou a maior goleada de todos os tempos no Campeonato Brasileiro: 10 a
+                    1 no Tiradentes-PI.
+                </p>
+
+                <b>1984 - Sócrates na Europa</b>
+                <p>
+                    O tri paulista escapou na última rodada com a derrota para o Santos por 1 a 0. Sócrates foi vendido
+                    para a Fiorentina (ITA).
+                </p>
+
+                <b>1985 - Não brilharam</b>
+                <p>
+                    Apesar de ter montado um time considerado excelente, a temporada não foi boa para o Corinthians, que
+                    não chegou às semifinais nem no Brasileiro nem no Paulista.
+                </p>
+
+                <img src="img/foto_trintadois.webp" alt="">
+
+                <b>1989 - Neto neles!</b>
+                <p>
+                    O Corinthians não conquistou nenhum título, mas contratou o futuro ídolo Neto naquele ano.
+                </p>
+
+                <b>1990 - Campeão brasileiro</b>
+                <p>
+                    No dia 16 de dezembro, o Timão levantou o troféu de campeão brasileiro pela primeira vez na
+                    história. Com 23 gols marcados em 25 partidas, a equipe do técnico Nelsinho Baptista
+                    venceu o São Paulo por 1 a 0 no último jogo, realizado no Morumbi. Neto marcou nove dos 23 gols,
+                    cinco em venenosas cobranças de falta. A escalação do time no dia da
+                    grande final foi: Ronaldo, Giba, Marcelo, Guinei e Jacenir; Márcio, Wilson Mano e Tupãzinho; Neto,
+                    Fabinho e Mauro.
+                </p>
+
+                <img src="img/foto_trintaquatro.jpg" alt="">
+
+                <b>1994 - Troféu Bandeirantes</b>
+                <p>
+                    A equipe do Parque São Jorge conquistou o Troféu Bandeirantes em cima do Santos, que garantiu vaga
+                    na Copa do Brasil do ano seguinte.
+                </p>
+
+                <b>1995 - Campeão de tudo</b>
+                <p>
+                    Em um ano espetacular, o Corinthians foi campeão da Copa São Paulo de Juniores, do Campeonato
+                    Paulista e da Copa do Brasil. Nesse último, o Alvinegro venceu oito das 10 partidas
+                    disputadas. Os jogos da final foram disputados com o Grêmio. Tanto no Pacaembu quanto no Olímpico,
+                    vitórias corinthianas: 2 a 1 em casa e 1 a 0 em Porto Alegre.
+                </p>
+
+                <b>1996 - Até na Espanha</b>
+                <p>
+                    A equipe do Parque São Jorge faturou o troféu Ramón de Carranza, disputado em Cádiz, na Espanha.
+                </p>
+
+                <img src="img/foto_trintaseis.jpg" alt="">
+
+                <b>1999 - Dono do país de novo</b>
+                <p>
+                    O Corinthians levou mais um Paulista e, pelo segundo ano consecutivo, o Brasileiro. Como havia
+                    acontecido no ano anterior, o Alvinegro dominou o nacional de ponta a ponta em 1999.
+                    Os resultados dos três jogos finais foram: Atlético-MG 3 x 2 Corinthians, Corinthians 2 x 0
+                    Atlético-MG e Corinthians 0 x 0 Atlético-MG. A escalação na última partida foi: Dida,
+                    Índio, Márcio Costa, João Carlos e Kléber; Gilmar, Rincón, Vampeta e Ricardinho; Edílson e
+                    Marcelinho. Dessa vez, o técnico era Oswaldo de Oliveira. Luizão marcou 21 dos 61 gols
+                    que o Alvinegro fez durante as 29 rodadas.
+                </p>
+
+                <b>2000 - O primeiro Mundial</b>
+                <p>
+                    O primeiro título mundial de clubes reconhecido pela Fifa veio com uma vitória nos pênaltis contra o
+                    Vasco depois do empate sem gols no tempo normal. A escalação da final
+                    foi: Dida, Índio, Adílson, Fábio Luciano e Kléber; Rincón, Vampeta, Ricardinho e Marcelinho; Edílson
+                    e Luizão. O Alvinegro fez seis gols em quatro jogos disputados. O segundo tento
+                    de Edílson no empate em 2 a 2 contra o Real Madrid é considerado um dos mais marcantes da história
+                    corinthiana.
+                </p>
+
+                <img src="img/foto_trintaoito.webp" alt="">
+
+                <b>2003 - Título sobre o rival</b>
+                <p>
+                    Com duas vitórias por 3 a 2 sobre o São Paulo, o Coringão levou o Campeonato Paulista mais uma vez.
+                    Rogério, Fábio Luciano e Gil marcaram no primeiro duelo. Na partida final,
+                    Liédson e Jorge Wágner (2) balançaram as redes para delírio da Fiel. O clube também aplicou uma
+                    goleada histórica naquele ano: 6 a 1 em cima do Paysandu pelo Brasileirão.
+                </p>
+
+                <b>2004 - Preparação para o tetra</b>
+                <p>
+                    O Timão teve uma campanha discreta no Brasileiro, ficando apenas com o quinto lugar.
+                </p>
+
+                <b>2005 - Campeão galático</b>
+                <p>
+                    Com um elenco de estrelas, o Corinthians conquistou o tetracampeonato brasileiro. Sob o comando do
+                    atacante argentino Carlitos Tevez, que marcou 20 gols no torneio, o clube venceu
+                    24 partidas e empatou nove, mesmo número de derrotas. Um dos duelos mais memoráveis foi o 7 a 1 em
+                    cima do rival Santos. A equipe do técnico Antônio Lopes marcou 87 gols e sofreu 29.
+                    A escalação da última partida foi: Fábio Costa, Marinho, Wendel, Coelho e Gustavo Nery; Marcelo
+                    Mattos, Rosinei, Bruno Octávio e Carlos Alberto; Nilmar e Tevez. O argentino ainda foi
+                    eleito o melhor jogador da competição.
+                </p>
+
+                <img src="img/foto_quarenta.avif" alt="">
+
+                <b>2009 - Ano fenomenal</b>
+                <p>
+                    Um dos maiores ídolos do futebol de todos os tempos foi o principal nome daquele ano no Corinthians.
+                    Ronaldo, o Fenômeno, marcou o gol mais bonito de sua carreira no primeiro jogo
+                    da final do Paulistão contra o Santos. Com a vitória por 3 a 1, bastou um empate em 1 a 1 na volta
+                    para o Alvinegro levar o caneco de forma invicta. Dois meses depois, em julho,
+                    Timão venceu o Internacional em casa por 2 a 0 no primeiro duelo da final da Copa do Brasil. Em
+                    Porto Alegre, o resultado de 2 a 2 garantiu mais um título ao Coringão.
+                </p>
+
+                <img src="img/foto_quarentadois.jpg" alt="">
+
+                <b>2011 - Pentacampeonato brasileiro</b>
+                <p>
+                    Em um empate sem gols contra o seu maior rival, o Timão conquistou, pela quinta vez, o Campeonato
+                    Brasileiro. A campanha do Alvinegro foi de 21 vitórias, oito empates e nove derrotas.
+                    A equipe de 2011 ficou conhecida pela regularidade dentro e fora de casa, além de uma excelente
+                    defesa. Liédson foi o artilheiro corinthiano com 12 gols. A escalação no último jogo
+                    foi: Júlio César, Alessandro, Paulo André, Leandro Castán e Fábio Santos; Wallace, Paulinho e Alex;
+                    Willian, Jorge Henrique e Liédson. No mesmo ano, o estádio do Corinthians, em construção,
+                    foi nomeado oficialmente a sede da abertura da Copa do Mundo 2014.
+                </p>
+
+                <b>2012 - O ano inesquecível</b>
+                <p>
+                    Pela primeira vez na história, o Corinthians foi campeão da Libertadores. E, para ser perfeito, de
+                    forma invicta! Foram 22 gols marcados e apenas quatro sofridos em oito vitórias e
+                    seis empates. O atacante Emerson marcou os gols da vitória por 2 a 0 contra o Boca Juniors (ARG) no
+                    jogo de volta da grande final. A escalação da partida foi: Cássio, Alessandro,
+                    Chicão, Leandro Castán e Fábio Santos; Ralf, Paulinho, Danilo e Alex; Jorge Henrique e Emerson. O
+                    gol de cabeça Paulinho contra o Vasco, que levou o Corinthians às semifinais da
+                    Libertadores, já é considerado por muitos o mais marcante da história do clube. Além disso, o Timão
+                    conquistou a Copinha também de forma invicta e teve um atleta medalhista olímpico
+                    em Londres. O nadador Thiago Pereira ficou com a prata nos 400m medley. Em dezembro, o Bando de
+                    Loucos invadiu o Japão e viu o Corinthians conquistar o Mundial de Clubes da Fifa pela
+                    segunda vez. Guerrero marcou de cabeça e garantiu o título contra o Chelsea no ano que se tornou
+                    inesquecível para a Fiel Torcida.
+                </p>
+            </div>
+
+
+
+
+
+            <div id="coluna_2">
+                <img src="img/foto_um.jpg" alt="">
+
+                <b>1911 - Fora de casa</b>
+                <p>
+                    Primeiro jogo do Timão fora da cidade de São Paulo. Na manhã de 17 de setembro, vitória sobre a
+                    Ponte Preta em Campinas por 1 a 0.
+                </p>
+
+                <b>1912 - Jogos na várzea</b>
+                <p>
+                    Registro de jogos na várzea cujos resultados não foram encontrados. Os adversários foram Paulista,
+                    Concórdia, Botafogo, Minas Gerais, Maranhão e Vila Mariana.
+                </p>
+
+                <b>1913 - Estreia no Paulista</b>
+                <p>
+                    Pela primeira vez, o Corinthians participou do campeonato da Liga Paulista de Futebol. O Alvinegro
+                    terminou em quarto lugar entre cinco equipes.
+                </p>
+
+                <img src="img/foto_tres.jpg" alt="">
+
+                <b>1916 - Campeão</b>
+                <p>
+                    De volta ao campeonato da Liga Paulista de Futebol, o Timão foi novamente campeão com 100% de
+                    aproveitamento: nove vitórias em nove jogos.
+                    Apparício foi o artilheiro do torneio com sete gols.
+                </p>
+
+                <b>1917 - Rivalidades antigas</b>
+                <p>
+                    O Corinthians disputou pela primeira vez o Campeonato Paulista ao lado de seus maiores rivais na
+                    época. Terminou em quarto lugar, atrás do
+                    Paulistano (campeão), do Palestra Itália (vice) e do Santos (terceiro).
+                </p>
+
+                <b>1918 - O primeiro estádio</b>
+                <p>
+                    Em suas horas de folga, os jogadores alvinegros construíram o gramado do primeiro estádio oficial
+                    corinthiano. Nomeado como Ponte Grande,
+                    a casa do Timão ficava onde hoje é a Ponte das Bandeiras, na Marginal Tietê.
+                </p>
+
+                <img src="img/foto_cinco.jpg" alt="">
+
+                <b>1923 - Bicampeonato Paulista</b>
+                <p>
+                    Pela primeira vez, o clube foi bicampeão paulista. Líder do turno inicial, o time começou o segundo
+                    com seis pontos de vantagem e só
+                    precisaria vencer três dos sete jogos restantes para levar o caneco.
+                </p>
+
+                <b>1924 - O primeiro tri</b>
+                <p>
+                    Mantendo a hegemonia no estadual, o Alvinegro conquistou o primeiro tricampeonato paulista. A
+                    Revolução Tenentista fez o torneio ser
+                    interrompido, mas, na volta, o título foi garantido com uma vitória sobre o Paulistano por 1 a 0.
+                </p>
+
+                <b>1925 - Por pouco</b>
+                <p>
+                    O Timão quase chegou ao tetra. O Paulistano se retirou do campeonato, mas os resultados de seus
+                    jogos não foram descontados. Caso tivessem
+                    sido, o clube terminaria na frente do campeão A. A. São Bento.
+                </p>
+
+                <img src="img/foto_sete.jpg" alt="">
+
+                <b>1929 - Mosqueteiro</b>
+                <p>
+                    O Alvinegro foi bicampeão do Campeonato Paulista novamente e, dessa vez, com 100% de aproveitamento:
+                    sete vitórias em sete jogos. No mesmo ano,
+                    a equipe venceu sua primeira partida internacional. Na ocasião, o Corinthians venceu o Barracas
+                    (ARG) por 3 a 1 no Parque São Jorge. Apparício,
+                    Rato e Rodrigues marcaram os gols da virada. No dia seguinte, o jornalista Thomaz Mazzoni, do
+                    impresso A Gazeta, relatou a partida destacando
+                    a “fibra de mosqueteiro” demonstrada pelos jogadores. Nesse mesmo ano, a Gazeta criou diversos
+                    mascotes aos times e, consequentemente, atribuiu
+                    o Mosqueteiro ao Timão.
+                </p>
+
+                <img src="img/foto_nove.jpg" alt="">
+
+                <b>1932 - Estadual fraco</b>
+                <p>
+                    Com uma campanha discreta, o Corinthians terminou o campeonato estadual em quarto lugar. Em meio à
+                    Revolução Constitucionalista, a competição
+                    foi disputada em somente um turno, vencido pelo Palestra.
+                </p>
+
+                <b>1933 - Técnico do Uruguai</b>
+                <p>
+                    O Timão contratou seu primeiro técnico de futebol remunerado, o uruguaio Pedro Mazzulo. A campanha
+                    no Paulista foi novamente o quarto lugar.
+                </p>
+
+                <img src="img/foto_onze.jpg" alt="">
+
+                <b>1936 - Invicto</b>
+                <p>
+                    Invicto! Durante o ano inteiro, o Corinthians não perdeu nenhum jogo. Foram 28 vitórias e três
+                    empates, incluindo as partidas amistosas. O Timão
+                    venceu o primeiro turno do Paulista, mas perdeu a final para o Palestra, campeão do returno, já em
+                    1937.
+                </p>
+
+                <b>1937 - Mais um Paulistão</b>
+                <p>
+                    No campeonato estadual daquele ano, o clube do Parque São Jorge levou o caneco. O duelo mais
+                    marcante foi o da vitória sobre o Palestra por 1 a 0 na
+                    antepenúltima rodada, com gol de Teleco.
+                </p>
+
+                <img src="img/foto_treze.jpg" alt="">
+
+
+                <b>1941 - Artilharia e título</b>
+                <p>
+                    Pela quinta vez, Teleco foi artilheiro do Paulistão. O atacante marcou 26 gols e foi um dos grandes
+                    nomes da conquista da competição. O Corinthians
+                    conquistou o campeonato com duas rodadas de antecedência ao derrotar o Santos por 3 a 2 na Vila
+                    Belmiro.
+                </p>
+
+                <img src="img/foto_quinze.jpg" alt="">
+
+                <b>1944 - Torneio Início</b>
+                <p>
+                    Naquele ano, o Timão contratou o zagueiro Domingos da Guia, venceu o Torneio Início e ficou em
+                    terceiro lugar no Paulista.
+                </p>
+
+                <b>1945 - O artilheiro Servílio</b>
+                <p>
+                    Apesar de não ter faturado nenhum título, o Coringão novamente foi dono do artilheiro do Paulista:
+                    Servílio, com 17 gols.
+                </p>
+
+                <b>1946 - Chegou perto</b>
+                <p>
+                    Mesmo com 18 vitórias e apenas duas derrotas em 20 jogos, o Alvinegro ficou com o segundo lugar no
+                    estadual.
+                </p>
+
+                <img src="img/foto_dezessete.avif" alt="">
+
+                <b>1950 - O primeiro Rio-São Paulo</b>
+                <p>
+                    Com 20 gols em sete jogos, o Timão conquistou o primeiro Torneio Rio-São Paulo de sua história. O
+                    último jogo terminou
+                    no empate em 1 a 1 com o Botafogo no Pacaembu. A escalação do duelo foi Bino, Newton e Belfare;
+                    Idário, Touguinha e Hélio;
+                    Cláudio, Luizinho, Baltazar, Nelsinho e Noronha.
+                </p>
+
+                <b>1951 - O ataque dos 100 gols</b>
+                <p>
+                    Após 10 anos, o Alvinegro foi campeão paulista novamente. O ataque formado por Cláudio, Luizinho,
+                    Baltazar, Carbone e Mário
+                    fez 103 gols em apenas 30 jogos. No mesmo ano, o Corinthians disputou sua primeira partida fora do
+                    Brasil. No Torneio
+                    Internacional/Quadrangular de Montevidéu, o clube derrotou o Combinado Uruguaio por 4 a 1 no estádio
+                    de Montevidéu.
+                </p>
+
+                <img src="img/foto_dezenove.webp" alt="">
+
+                <b>1955 - Em cima dos lusos</b>
+                <p>
+                    Com uma vitória por 2 a 1 em cima do Benfica (POR) no Pacaembu, o Timão conquistou o Torneio
+                    Internacional Charles Miller.
+                </p>
+
+                <b>1956 - Taça dos invictos</b>
+                <p>
+                    Pela primeira vez, o Corinthians levou a cobiçada Taça dos Invictos, por conta de seus 25 jogos sem
+                    derrota no Paulista.
+                    Foram 17 vitórias e oito empates. Apesar disso, o Alvinegro terminou o campeonato apenas na terceira
+                    posição.
+                </p>
+
+                <b>1957 - Dono definitivo</b>
+                <p>
+                    O Coringão ficou com o segundo lugar no Campeonato Paulista, mas tornou-se dono definitivo da Taça
+                    dos Invictos. Foram 35 jogos sem perder na competição, com 25 vitórias e 10 empates.
+                </p>
+
+                <img src="img/foto_vinteum.jpg" alt="">
+
+                <b>1961 - Campanha fraca</b>
+                <p>
+                    Com uma campanha discreta, o Alvinegro terminou o Paulista na sexta posição.
+                </p>
+
+                <b>1962 - I Taça São Paulo</b>
+                <p>
+                    Naquele ano, o clube foi campeão da I Taça São Paulo, torneio eliminatório envolvendo equipes de
+                    todas as divisões de SP.
+                </p>
+
+                <b>1963 - Três comandantes</b>
+                <p>
+                    O Corinthians foi comandado por três técnicos em 1963: Fleitas Solich, Rato e Del Debbio. Porém, foi
+                    somente o nono colocado entre os 16 participantes do Paulistão.
+                </p>
+
+                <img src="img/foto_vintetres.jpg" alt="">
+
+                <b>1967 - Não foi longe</b>
+                <p>
+                    Liderou a primeira fase do torneio Robertão, mas não teve bons resultados no quadrangular final.
+                </p>
+
+                <b>1968 - A quebra do tabu</b>
+                <p>
+                    Com gols de Paulo Borges e Flávio, o Coringão venceu o Santos por 2 a 0 e quebrou um tabu de 11 anos
+                    sem derrotar a equipe do litoral paulista. Na noite de 06 de março,
+                    a equipe alvinegra entrou no Pacaembu com a seguinte escalação: Diogo, Osvaldo Cunha, Ditão, Luís
+                    Carlos e Maciel; Édson Cegonha e Rivelino; Buião, Paulo Borges, Flávio e Eduardo.
+                </p>
+
+                <img src="img/foto_vintecinco.jpg" alt="">
+
+                <b>1972 - Passou perto</b>
+                <p>
+                    Semifinalista no Brasileiro, o clube perdeu para o Botafogo a chance de decidir o título contra o
+                    Palmeiras.
+                </p>
+
+                <b>1973 - Ano discreto</b>
+                <p>
+                    Com o técnico “linha-dura” Yustrich, o time do Parque São Jorge teve uma campanha discreta no
+                    Paulista (quarto lugar) e no Brasileiro (12º lugar).
+                </p>
+
+                <b>1974 - Final complicada</b>
+                <p>
+                    O Timão voltou a disputar o título paulista diretamente em um jogo após 17 anos. A derrota para o
+                    Palmeiras na decisão resultou na saída de Rivellino para o Fluminense.
+                </p>
+
+                <img src="img/foto_vintesete.jpg" alt="">
+
+                <b>1977 - Fim do jejum</b>
+                <p>
+                    Depois de 22 anos, oito meses e sete dias, o Corinthians era novamente campeão paulista. O gol foi
+                    marcado por Basílio na final do Campeonato Paulista na vitória
+                    por 1 a 0 sobre a Ponte Preta, realizada no Morumbi no dia 13 de outubro. Quatro dias antes, o
+                    estádio registrou seu maior público: 146.072 pessoas acompanharam
+                    um dos jogos da final entre as equipes. O Timão terminou a competição com 72 gols marcados em 48
+                    partidas. No time do técnico Oswaldo Brandão, o artilheiro do torneio
+                    foi Geraldão, com 25 gols.
+                </p>
+
+                <img src="img/foto_vintenove.webp" alt="">
+
+                <b>1981 - Campanha ruim</b>
+                <p>
+                    O Alvinegro não realizou boas campanhas no Paulista e no Brasileiro. O oitavo lugar no estadual
+                    levaram a equipe a disputar a Taça de Prata.
+                </p>
+
+                <b>1982 - Democracia Corinthiana</b>
+                <p>
+                    Embalado pelos ideais da Democracia Corinthiana, o Timão foi campeão paulista naquele ano. O
+                    movimento visava maior participação dos jogadores e demais empregados
+                    do clube nas decisões do Departamento de Futebol. Durou até 1985 e contou com um grupo de jogadores
+                    talentosos e únicos, como Sócrates, Casagrande, Zenon, Biro-Biro,
+                    Zé Maria e Wladimir, entre outros.
+                </p>
+
+                <img src="img/foto_trintaum.avif" alt="">
+
+                <b>1986 - Rivalidade maior</b>
+                <p>
+                    O Timão chegou às semifinais do Paulista, mas não passou do Palmeiras. No nacional, foi até as
+                    quartas.
+                </p>
+
+                <b>1987 - Campanha memorável</b>
+                <p>
+                    No Campeonato Paulista, o Corinthians saiu da penúltima colocação no primeiro turno para um
+                    histórico vice-campeonato.
+                </p>
+
+                <b>1988 - O 20° Paulistão</b>
+                <p>
+                    No ano do centenário da abolição da escravatura, Viola marcou na prorrogação, garantiu a vitória
+                    alvinegra sobre o Guarani por 1 a 0 e o 20º título paulista do clube.
+                </p>
+
+                <img src="img/foto_trintatres.jpg" alt="">
+
+                <b>1991 - Vice-campeão</b>
+                <p>
+                    O Corinthians voltou a disputar a Libertadores depois de 14 anos, mas caiu nas oitavas de final
+                    diante do Boca Juniors (ARG). No Paulistão, ficou com o vice-campeonato.
+                </p>
+
+                <b>1992 - Desempenho médio</b>
+                <p>
+                    O Alvinegro ficou com a terceira posição no estadual e com o quinto lugar no Brasileiro.
+                </p>
+
+                <b>1993 - Fora da final</b>
+                <p>
+                    No Campeonato Brasileiro, mesmo tendo perdido somente para o Vitória, em Salvador, o time ficou de
+                    fora da decisão.
+                </p>
+
+                <img src="img/foto_trintacinco.jpg" alt="">
+
+                <b>1997 - O rei do estadual</b>
+                <p>
+                    Com jogadores como Antônio Carlos, Túlio e Donizete, o Alvinegro venceu mais um Paulista.
+                </p>
+
+                <b>1998 - O Brasil é alvinegro</b>
+                <p>
+                    Após os empates em 2 a 2 e 1 a 1 nos primeiros jogos, o Timão venceu o Cruzeiro por 2 a 0 na última
+                    partida com gols de Edílson e Marcelinho Carioca, sagrando-se bicampeão Brasileiro.
+                    No dia 23 de dezembro, a escalação da equipe foi: Nei, Índio, Batata, Gamarra e Silvinho;
+                    Ricardinho, Vampeta, Rincón e Marcelinho; Edílson e Mirandinha. A equipe de
+                    Vanderlei Luxemburgo marcou 57 gols em 32 duelos, sendo que 19 deles foram do artilheiro Marcelinho
+                    Carioca.
+                </p>
+
+                <img src="img/foto_trintasete.jpg" alt="">
+
+                <b>2001 - Gol inesquecível</b>
+                <p>
+                    O Coringão faturou mais uma vez o título do Campeonato Paulista. Porém, a cena que vai ficar marcada
+                    para sempre na memória da Fiel é o gol de Ricardinho contra o Santos na
+                    semifinal. Nos últimos segundos do jogo decisivo, o meia fez 2 a 1 para o Alvinegro e garantiu a
+                    equipe na final.
+                </p>
+
+                <b>2002 - Ano fantástico</b>
+                <p>
+                    Sob o comando do técnico Carlos Alberto Parreira, o Timão teve um ano glorioso. No dia 12 de maio,
+                    foi campeão do Rio-São Paulo em cima do tricolor paulista com a vitória por 3 a 2 na
+                    primeira partida da final e com o empate em 1 a 1 no segundo jogo. Três dias depois, o Corinthians
+                    levantou mais um troféu. Contra o Brasiliense, o Alvinegro faturou a Copa do Brasil
+                    pela segunda vez. No duelo de ida, 2 a 1 para o time paulista. Já na volta, a partida terminou com
+                    um gol para cada equipe.
+                </p>
+
+                <img src="img/foto_trintanove.webp" alt="">
+
+                <b>2006 - Campanha fraca</b>
+                <p>
+                    Com o desmanche do elenco, o Alvinegro foi mal no Brasileiro e se esforçou para continuar na série
+                    A.
+                </p>
+
+                <b>2007 - o pior episódio da história</b>
+                <p>
+                    No pior ano da história do clube, o Timão foi rebaixado para a série B do Campeonato Brasileiro.
+                </p>
+
+                <b>2008 - O Coringão voltou</b>
+                <p>
+                    Sob a liderança do técnico Mano Menezes, o Corinthians teve uma ótima campanha na série B e
+                    conquistou o título com quatro rodadas de antecedência. Foram 79 gols marcados em 38 duelos.
+                    A última partida foi realizada no Pacaembu, com vitória corinthiana por 3 a 2 sobre o Avaí. Os
+                    atacantes Dentinho e Herrera foram os artilheiros da equipe, com 14 gols cada.
+                </p>
+
+                <img src="img/foto_quarentaum.webp" alt="">
+
+                <b>2010 - Centenário Corinthiano</b>
+                <p>
+                    Apesar de não ter levado nenhum título em 2010, o ano foi de muita festa para a Fiel Torcida por
+                    conta do Centenário Corinthiano. No dia 1º de setembro, mais de 100 mil loucos do
+                    bando lotaram o Anhangabaú para as comemorações de aniversário do Timão. Em novembro, Ronaldo
+                    Fenômeno marcou o último gol de sua carreira como profissional. De pênalti, o eterno
+                    camisa 9 fez o gol da vitória por 1 a 0 sobre o Cruzeiro.
+                </p>
+
+                <img src="img/foto_quarentatres.jpg" alt="">
+
+                <img src="img/foto_" alt="">
+            </div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
 
 <script>
 
-// var usuario = sessionStorage.getItem('ID_USUARIO')
+    // var usuario = sessionStorage.getItem('ID_USUARIO')
 
-// if(usuario == undefined || usuario == null){
-//     window.location.href = './login.html'
-// }
+    // if(usuario == undefined || usuario == null){
+    //     window.location.href = './login.html'
+    // }
 
-function limparSessao() {
-    sessionStorage.clear();
-    window.location = "../index.html";
-}
-
-var currentSlide = 0;
-var slideInterval = 3000;
-
-function showSlide(index) {
-    var slides = document.querySelectorAll('.slide');
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+    function limparSessao() {
+        sessionStorage.clear();
+        window.location = "../index.html";
     }
 
-    var slidesContainer = document.querySelector('.slides');
-    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    var currentSlide = 0;
+    var slideInterval = 3000;
 
-    slides.forEach(slide => slide.classList.remove('active'));
-    slides[currentSlide].classList.add('active');
-}
+    function showSlide(index) {
+        var slides = document.querySelectorAll('.slide');
+        if (index >= slides.length) {
+            currentSlide = 0;
+        } else if (index < 0) {
+            currentSlide = slides.length - 1;
+        } else {
+            currentSlide = index;
+        }
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
+        var slidesContainer = document.querySelector('.slides');
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
 
 
-setInterval(nextSlide, slideInterval);
+    setInterval(nextSlide, slideInterval);
+
+    function obterDados() {
+        fetch(`/titulos/listar/`, {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.json(); // Converte a resposta para JSON
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+                throw new Error("Recurso não encontrado (404).");
+            } else {
+                throw new Error("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).then(function (dados) {
+            console.log("Dados recebidos: ", dados);
+
+            // Verifique se os elementos DOM existem antes de tentar acessá-los
+            if (dados && Array.isArray(dados)) {
+                for (let i = 0; i < dados.length; i++) {
+                    if (dados[i].campeonato === 'Paulistão') {
+                        if (qtd_paulistao) qtd_paulistao.innerHTML = `${dados[i].qtd}x 🏆`;
+                    } else if (dados[i].campeonato === 'Brasileirão') {
+                        if (qtd_brasileirao) qtd_brasileirao.innerHTML = `${dados[i].qtd}x 🏆`;
+                    } else if (dados[i].campeonato === 'Copa do Brasil') {
+                        if (qtd_cdb) qtd_cdb.innerHTML = `${dados[i].qtd}x 🏆`;
+                    } else if (dados[i].campeonato === 'Libertadores') {
+                        if (qtd_libertadores) qtd_libertadores.innerHTML = `${dados[i].qtd}x 🏆`;
+                    } else if (dados[i].campeonato === 'Mundial') {
+                        if (qtd_mundial) qtd_mundial.innerHTML = `${dados[i].qtd}x 🏆`;
+                    }
+                }
+            }
+        }).catch(function (erro) {
+            console.log(`#ERRO: ${erro.message}`);
+        });
+    }
+
 
 </script>
