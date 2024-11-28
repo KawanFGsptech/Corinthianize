@@ -2,7 +2,7 @@ var database = require("../database/config");
 
 function atualizarVoto(nomeJogador) {
   var instrucaoSql = `
-        UPDATE votos
+        UPDATE Votos
         SET qtd = qtd + 1
         WHERE jogador = '${nomeJogador}'
     `;

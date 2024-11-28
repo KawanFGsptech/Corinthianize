@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="obterDadosGrafico1(), obterDadosGrafico2()">
+<body onload="obterDadosGrafico1(), obterDadosGrafico2(), obterDados()">
 
     <header class="hdr_titulo" id="hdr_inicio">
         <h1>CORINTHIANIZE</h1>
@@ -21,6 +21,15 @@
             <a style="color: red;" onclick="limparSessao()">SAIR</a>
         </div>
     </header>
+
+    <div id="div_kpi">
+        <div>
+           TOTAL DE RESULTADOS <p id="total_participantes"></p>
+        </div>
+        <div>
+           MÉDIA <p id="media_resultados"></p>
+        </div>
+    </div>
 
     <div id="div_graficos">
         <div class="g1">
@@ -185,6 +194,33 @@
         }
 
 
+    }
+
+    function obterDados() {
+        fetch(`/resultado/kpis`, {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(function (resposta) {
+            if (resposta.ok) {
+                return resposta.json();
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+                throw new Error("Recurso não encontrado (404).");
+            } else {
+                throw new Error("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).then(function (resposta) {
+            console.log(resposta)
+            var media = Number(resposta[0].media)
+                total_participantes.innerHTML = `${resposta[0].total}`
+                media_resultados.innerHTML = `${media.toFixed(2)}`
+
+            
+        }).catch(function (erro) {
+            console.log(`#ERRO: ${erro.message}`);
+        });
     }
 
 

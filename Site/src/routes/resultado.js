@@ -15,4 +15,8 @@ router.get("/listar2/", function (req, res) {
     resultadoController.listar2(req, res);
 })
 
+router.get("/kpis/", function (req, res) {
+    resultadoController.kpis(req, res);
+})
+
 module.exports = router;

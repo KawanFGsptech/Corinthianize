@@ -36,4 +36,14 @@ function listar2(req, res) {
     })
 }
 
-module.exports = {cadastrarNota, listar1, listar2}
+function kpis(req, res) {
+    console.log('estou na controller da kpi')
+    resultadoModel.kpis()
+    .then(function(resultado){
+        res.status(200).json(resultado)
+    }).catch(err=>{
+        res.status(500).send(err)
+    })
+}
+
+module.exports = {cadastrarNota, listar1, listar2, kpis}

@@ -24,7 +24,7 @@
             <input type="text" id="ipt_email" autocomplete="off">
             <p>Senha:</p>
             <input type="password" id="ipt_senha"> <br> <br>
-            <button onclick="cadastrar()" class="btn_cadlog">CADASTRAR</button>
+            <button onclick="verificarEmail()" class="btn_cadlog">CADASTRAR</button>
         </div>
     </div>
 
@@ -33,6 +33,29 @@
 </html>
 
 <script>
+
+    function verificarEmail() {
+        var email = ipt_email.value
+        fetch(`/usuarios/verificar/${email}`, {
+            method: "get",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                resposta.json().then(function (resposta) {
+                    if (resposta.length == 0) {
+                        cadastrar()
+                    } else {
+                        return alert('Este email já está em uso')
+                    }
+            });
+            } else {
+                console.log('ta errado o caminho')
+            }
+        })
+    }
 
     function cadastrar() {
 
@@ -56,36 +79,36 @@
         }
 
         fetch("/usuarios/cadastrar", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    // crie um atributo que recebe o valor recuperado aqui
-                    // Agora vá para o arquivo routes/usuario.js
-                    nomeServer: nomeVar,
-                    nickServer: nickVar,
-                    emailServer: emailVar,
-                    senhaServer: senhaVar,
-                }),
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                nickServer: nickVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    alert('Cadastro realizado com sucesso!!!')
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, 1);
+
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
             })
-                .then(function (resposta) {
-                    console.log("resposta: ", resposta);
-
-                    if (resposta.ok) {
-                        alert('Cadastro realizado com sucesso!!!')
-
-                        setTimeout(() => {
-                            window.location = "login.html";
-                        }, 1);
-
-                    } else {
-                        throw "Houve um erro ao tentar realizar o cadastro!";
-                    }
-                })
-                .catch(function (resposta) {
-                    console.log(`#ERRO: ${resposta}`);
-                });
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
 
     }
 

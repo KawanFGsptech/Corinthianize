@@ -270,8 +270,24 @@ h2 {
 #div_titulos div {
     height: 100px;
     width: 200px;
-    background-color: white;
-    border: 2px solid black;
+    background-color: #C0B7A6;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#div_kpi {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#div_kpi div {
+    height: 100px;
+    width: 300px;
+    background-color: #C0B7A6;
+    border: 0px;
     border-radius: 10px;
     text-align: center;
     font-weight: bold;

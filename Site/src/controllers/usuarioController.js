@@ -80,7 +80,14 @@ function cadastrar(req, res) {
     }
 }
 
-module.exports = {
-    autenticar,
-    cadastrar
+function verificar(req, res) {
+    var email = req.params.email;
+    usuarioModel.verificar(email)
+    .then(function(resultado){
+        res.status(200).json(resultado)
+    }).catch(err=>{
+        res.status(500).send(err)
+    })
 }
+
+module.exports = {autenticar, cadastrar, verificar}

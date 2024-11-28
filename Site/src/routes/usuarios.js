@@ -13,4 +13,8 @@ router.post("/autenticar", function (req, res) {
     // console.log("chegamo aq")
 });
 
+router.get("/verificar/:email", function (req, res) {
+    usuarioController.verificar(req, res);
+})
+
 module.exports = router;
