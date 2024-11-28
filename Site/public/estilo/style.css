@@ -109,10 +109,10 @@ a {
     margin-bottom: 20px;
 }
 
-
-#btn_cadlog {
+.btn_cadlog {
     font-family: Consolas, monaco, monospace;
-    border: 0px;
+    border: 3px solid #000;
+    border-radius: 20px;
     background-color: #E4DDCF;
     font-weight: bold;
     font-size: 25px;
